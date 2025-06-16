@@ -1,0 +1,168 @@
+2025-06-14 01:45:02,697 - apscheduler.executors.default - INFO - run_job:129 - Running job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-14 05:45:02 CDT)" (scheduled at 2025-06-14 01:45:02.683180-05:00)
+2025-06-14 01:45:02,971 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 9)
+2025-06-14 01:45:03,326 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 01:45:03,338 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 01:45:03,339 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 01:45:03,341 - apscheduler.executors.default - INFO - run_job:156 - Job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-14 05:45:02 CDT)" executed successfully
+2025-06-14 01:50:03,345 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_0
+2025-06-14 01:50:03,347 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 01:50:03 CDT], next run at: 2025-06-14 01:50:03 CDT)" (scheduled at 2025-06-14 01:50:03.339443-05:00)
+2025-06-14 01:50:03,373 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 10)
+2025-06-14 01:50:03,523 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 01:50:03,530 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 01:50:03,531 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 01:50:03,532 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 01:50:03 CDT], next run at: 2025-06-14 01:50:03 CDT)" executed successfully
+2025-06-14 01:55:03,536 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_1
+2025-06-14 01:55:03,536 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 01:55:03 CDT], next run at: 2025-06-14 01:55:03 CDT)" (scheduled at 2025-06-14 01:55:03.531492-05:00)
+2025-06-14 01:55:03,568 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 11)
+2025-06-14 01:55:03,702 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 01:55:03,706 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 01:55:03,706 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 01:55:03,707 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 01:55:03 CDT], next run at: 2025-06-14 01:55:03 CDT)" executed successfully
+2025-06-14 02:00:03,708 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_2
+2025-06-14 02:00:03,708 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 02:00:03 CDT], next run at: 2025-06-14 02:00:03 CDT)" (scheduled at 2025-06-14 02:00:03.706687-05:00)
+2025-06-14 02:00:03,740 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 12)
+2025-06-14 02:00:03,924 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 02:00:03,934 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 02:00:03 CDT], next run at: 2025-06-14 02:00:03 CDT)" executed successfully
+2025-06-14 05:45:02,706 - apscheduler.executors.default - INFO - run_job:129 - Running job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-14 09:45:02 CDT)" (scheduled at 2025-06-14 05:45:02.683180-05:00)
+2025-06-14 05:45:02,751 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 13)
+2025-06-14 05:45:02,999 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 05:45:03,004 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 05:45:03,005 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 05:45:03,005 - apscheduler.executors.default - INFO - run_job:156 - Job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-14 09:45:02 CDT)" executed successfully
+2025-06-14 05:50:03,019 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_0
+2025-06-14 05:50:03,019 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 05:50:03 CDT], next run at: 2025-06-14 05:50:03 CDT)" (scheduled at 2025-06-14 05:50:03.005228-05:00)
+2025-06-14 05:50:03,079 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 14)
+2025-06-14 05:50:03,343 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 05:50:03,349 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 05:50:03,349 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 05:50:03,349 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 05:50:03 CDT], next run at: 2025-06-14 05:50:03 CDT)" executed successfully
+2025-06-14 05:55:03,366 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_1
+2025-06-14 05:55:03,366 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 05:55:03 CDT], next run at: 2025-06-14 05:55:03 CDT)" (scheduled at 2025-06-14 05:55:03.349001-05:00)
+2025-06-14 05:55:03,398 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 15)
+2025-06-14 05:55:03,529 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 05:55:03,534 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 05:55:03,545 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 05:55:03,550 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 05:55:03 CDT], next run at: 2025-06-14 05:55:03 CDT)" executed successfully
+2025-06-14 06:00:00,044 - apscheduler.executors.default - INFO - run_job:129 - Running job "Daily_Report_Generator (trigger: cron[hour='6', minute='0'], next run at: 2025-06-15 06:00:00 CDT)" (scheduled at 2025-06-14 06:00:00-05:00)
+2025-06-14 06:00:00,157 - production_scheduler_core - INFO - execute_task:252 - Executing task Daily_Report_Generator (Run ID: 16)
+2025-06-14 06:00:00,256 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-14 06:00:00,261 - production_scheduler_core - INFO - execute_task:342 - Retrying task Daily_Report_Generator in 300 seconds
+2025-06-14 06:00:00,262 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 06:00:00,262 - apscheduler.executors.default - INFO - run_job:156 - Job "Daily_Report_Generator (trigger: cron[hour='6', minute='0'], next run at: 2025-06-15 06:00:00 CDT)" executed successfully
+2025-06-14 06:00:03,550 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_2
+2025-06-14 06:00:03,550 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 06:00:03 CDT], next run at: 2025-06-14 06:00:03 CDT)" (scheduled at 2025-06-14 06:00:03.545943-05:00)
+2025-06-14 06:00:03,567 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 17)
+2025-06-14 06:00:03,634 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 06:00:03,640 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 06:00:03 CDT], next run at: 2025-06-14 06:00:03 CDT)" executed successfully
+2025-06-14 06:05:00,269 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_1_0
+2025-06-14 06:05:00,269 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 06:05:00 CDT], next run at: 2025-06-14 06:05:00 CDT)" (scheduled at 2025-06-14 06:05:00.262210-05:00)
+2025-06-14 06:05:00,374 - production_scheduler_core - INFO - execute_task:252 - Executing task Daily_Report_Generator (Run ID: 18)
+2025-06-14 06:05:00,469 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-14 06:05:00,473 - production_scheduler_core - INFO - execute_task:342 - Retrying task Daily_Report_Generator in 300 seconds
+2025-06-14 06:05:00,482 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 06:05:00,483 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 06:05:00 CDT], next run at: 2025-06-14 06:05:00 CDT)" executed successfully
+2025-06-14 06:10:00,485 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_1_1
+2025-06-14 06:10:00,485 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 06:10:00 CDT], next run at: 2025-06-14 06:10:00 CDT)" (scheduled at 2025-06-14 06:10:00.482775-05:00)
+2025-06-14 06:10:00,524 - production_scheduler_core - INFO - execute_task:252 - Executing task Daily_Report_Generator (Run ID: 19)
+2025-06-14 06:10:00,694 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-14 06:10:00,704 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 06:10:00 CDT], next run at: 2025-06-14 06:10:00 CDT)" executed successfully
+2025-06-14 09:45:02,706 - apscheduler.executors.default - INFO - run_job:129 - Running job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-14 13:45:02 CDT)" (scheduled at 2025-06-14 09:45:02.683180-05:00)
+2025-06-14 09:45:02,874 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 20)
+2025-06-14 09:45:03,216 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 09:45:03,233 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 09:45:03,233 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 09:45:03,234 - apscheduler.executors.default - INFO - run_job:156 - Job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-14 13:45:02 CDT)" executed successfully
+2025-06-14 09:50:03,241 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_0
+2025-06-14 09:50:03,241 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 09:50:03 CDT], next run at: 2025-06-14 09:50:03 CDT)" (scheduled at 2025-06-14 09:50:03.233795-05:00)
+2025-06-14 09:50:03,286 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 21)
+2025-06-14 09:50:03,482 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 09:50:03,486 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 09:50:03,487 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 09:50:03,487 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 09:50:03 CDT], next run at: 2025-06-14 09:50:03 CDT)" executed successfully
+2025-06-14 09:55:03,490 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_1
+2025-06-14 09:55:03,490 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 09:55:03 CDT], next run at: 2025-06-14 09:55:03 CDT)" (scheduled at 2025-06-14 09:55:03.486747-05:00)
+2025-06-14 09:55:03,522 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 22)
+2025-06-14 09:55:03,694 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 09:55:03,698 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 09:55:03,698 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 09:55:03,699 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 09:55:03 CDT], next run at: 2025-06-14 09:55:03 CDT)" executed successfully
+2025-06-14 10:00:03,711 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_2
+2025-06-14 10:00:03,711 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 10:00:03 CDT], next run at: 2025-06-14 10:00:03 CDT)" (scheduled at 2025-06-14 10:00:03.698283-05:00)
+2025-06-14 10:00:03,734 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 23)
+2025-06-14 10:00:03,904 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 10:00:03,922 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 10:00:03 CDT], next run at: 2025-06-14 10:00:03 CDT)" executed successfully
+2025-06-14 13:45:02,702 - apscheduler.executors.default - INFO - run_job:129 - Running job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-14 17:45:02 CDT)" (scheduled at 2025-06-14 13:45:02.683180-05:00)
+2025-06-14 13:45:02,824 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 24)
+2025-06-14 13:45:03,170 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 13:45:03,179 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 13:45:03,189 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 13:45:03,189 - apscheduler.executors.default - INFO - run_job:156 - Job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-14 17:45:02 CDT)" executed successfully
+2025-06-14 13:50:03,208 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_0
+2025-06-14 13:50:03,208 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 13:50:03 CDT], next run at: 2025-06-14 13:50:03 CDT)" (scheduled at 2025-06-14 13:50:03.189655-05:00)
+2025-06-14 13:50:03,315 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 25)
+2025-06-14 13:50:03,465 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 13:50:03,469 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 13:50:03,469 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 13:50:03,470 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 13:50:03 CDT], next run at: 2025-06-14 13:50:03 CDT)" executed successfully
+2025-06-14 13:55:03,477 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_1
+2025-06-14 13:55:03,477 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 13:55:03 CDT], next run at: 2025-06-14 13:55:03 CDT)" (scheduled at 2025-06-14 13:55:03.469538-05:00)
+2025-06-14 13:55:03,492 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 26)
+2025-06-14 13:55:03,684 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 13:55:03,689 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 13:55:03,691 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 13:55:03,691 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 13:55:03 CDT], next run at: 2025-06-14 13:55:03 CDT)" executed successfully
+2025-06-14 14:00:03,696 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_2
+2025-06-14 14:00:03,696 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 14:00:03 CDT], next run at: 2025-06-14 14:00:03 CDT)" (scheduled at 2025-06-14 14:00:03.691519-05:00)
+2025-06-14 14:00:03,757 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 27)
+2025-06-14 14:00:03,938 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 14:00:03,946 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 14:00:03 CDT], next run at: 2025-06-14 14:00:03 CDT)" executed successfully
+2025-06-14 17:45:02,690 - apscheduler.executors.default - INFO - run_job:129 - Running job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-14 21:45:02 CDT)" (scheduled at 2025-06-14 17:45:02.683180-05:00)
+2025-06-14 17:45:02,828 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 28)
+2025-06-14 17:45:03,108 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 17:45:03,115 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 17:45:03,126 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 17:45:03,126 - apscheduler.executors.default - INFO - run_job:156 - Job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-14 21:45:02 CDT)" executed successfully
+2025-06-14 17:50:03,142 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_0
+2025-06-14 17:50:03,142 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 17:50:03 CDT], next run at: 2025-06-14 17:50:03 CDT)" (scheduled at 2025-06-14 17:50:03.126319-05:00)
+2025-06-14 17:50:03,237 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 29)
+2025-06-14 17:50:03,424 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 17:50:03,455 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 17:50:03,457 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 17:50:03,458 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 17:50:03 CDT], next run at: 2025-06-14 17:50:03 CDT)" executed successfully
+2025-06-14 17:55:03,460 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_1
+2025-06-14 17:55:03,460 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 17:55:03 CDT], next run at: 2025-06-14 17:55:03 CDT)" (scheduled at 2025-06-14 17:55:03.457725-05:00)
+2025-06-14 17:55:03,482 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 30)
+2025-06-14 17:55:03,628 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 17:55:03,635 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 17:55:03,635 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 17:55:03,636 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 17:55:03 CDT], next run at: 2025-06-14 17:55:03 CDT)" executed successfully
+2025-06-14 18:00:03,642 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_2
+2025-06-14 18:00:03,643 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 18:00:03 CDT], next run at: 2025-06-14 18:00:03 CDT)" (scheduled at 2025-06-14 18:00:03.635906-05:00)
+2025-06-14 18:00:03,667 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 31)
+2025-06-14 18:00:03,951 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 18:00:03,961 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 18:00:03 CDT], next run at: 2025-06-14 18:00:03 CDT)" executed successfully
+2025-06-14 21:45:02,686 - apscheduler.executors.default - INFO - run_job:129 - Running job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-15 01:45:02 CDT)" (scheduled at 2025-06-14 21:45:02.683180-05:00)
+2025-06-14 21:45:02,752 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 32)
+2025-06-14 21:45:03,066 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 21:45:03,085 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 21:45:03,090 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 21:45:03,090 - apscheduler.executors.default - INFO - run_job:156 - Job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-15 01:45:02 CDT)" executed successfully
+2025-06-14 21:50:03,097 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_0
+2025-06-14 21:50:03,097 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 21:50:03 CDT], next run at: 2025-06-14 21:50:03 CDT)" (scheduled at 2025-06-14 21:50:03.089390-05:00)
+2025-06-14 21:50:03,193 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 33)
+2025-06-14 21:50:03,345 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 21:50:03,350 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 21:50:03,350 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 21:50:03,350 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 21:50:03 CDT], next run at: 2025-06-14 21:50:03 CDT)" executed successfully
+2025-06-14 21:55:03,360 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_1
+2025-06-14 21:55:03,361 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 21:55:03 CDT], next run at: 2025-06-14 21:55:03 CDT)" (scheduled at 2025-06-14 21:55:03.350997-05:00)
+2025-06-14 21:55:03,391 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 34)
+2025-06-14 21:55:03,570 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 21:55:03,575 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-14 21:55:03,575 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-14 21:55:03,575 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 21:55:03 CDT], next run at: 2025-06-14 21:55:03 CDT)" executed successfully
+2025-06-14 22:00:03,577 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_2
+2025-06-14 22:00:03,577 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-14 22:00:03 CDT], next run at: 2025-06-14 22:00:03 CDT)" (scheduled at 2025-06-14 22:00:03.575804-05:00)
+2025-06-14 22:00:03,602 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 35)
+2025-06-14 22:00:03,754 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 22:00:03,767 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-14 22:00:03 CDT], next run at: 2025-06-14 22:00:03 CDT)" executed successfully

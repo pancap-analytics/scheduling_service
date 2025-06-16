@@ -1,0 +1,172 @@
+2025-06-13 17:45:03,464 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-13 17:50:03,664 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-13 17:55:03,888 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-13 18:00:04,093 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-13 21:45:03,059 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-13 21:50:03,393 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-13 21:55:03,610 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-13 22:00:03,825 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 01:45:03,326 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 01:50:03,523 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 01:55:03,702 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 02:00:03,924 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 05:45:02,999 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 05:50:03,343 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 05:55:03,529 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 06:00:00,256 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-14 06:00:03,634 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 06:05:00,469 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-14 06:10:00,694 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-14 09:45:03,216 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 09:50:03,482 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 09:55:03,694 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 10:00:03,904 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 13:45:03,170 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 13:50:03,465 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 13:55:03,684 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 14:00:03,938 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 17:45:03,108 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 17:50:03,424 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 17:55:03,628 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 18:00:03,951 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 21:45:03,066 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 21:50:03,345 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 21:55:03,570 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-14 22:00:03,754 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 01:45:03,195 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 01:50:03,419 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 01:55:03,610 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 02:00:03,854 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 05:45:03,164 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 05:50:03,482 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 05:55:03,720 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 06:00:00,250 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-15 06:00:03,838 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 06:05:00,452 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-15 06:10:00,684 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-15 09:45:03,056 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 09:50:03,284 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 09:55:03,501 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 10:00:03,695 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 13:45:03,078 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 13:50:03,347 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 13:55:03,527 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 14:00:03,793 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 17:45:03,101 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 17:50:03,263 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 17:55:03,506 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 18:00:03,790 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 21:45:02,990 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 21:50:03,205 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 21:55:03,396 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-15 22:00:03,600 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 01:45:03,125 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 01:50:03,337 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 01:55:03,552 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 02:00:03,720 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 05:45:03,007 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 05:50:03,269 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 05:55:03,537 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 06:00:00,304 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-16 06:00:03,715 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 06:05:00,519 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-16 06:10:00,864 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-16 08:45:17,649 - monitoring_dashboard - ERROR - log_exception:875 - Exception on /tasks [GET]
+Traceback (most recent call last):
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 291, in tasks_page
+    return send_from_directory(template_dir, 'tasks.html')
+           ^^^^^^^^^^^^^^^^^^^
+NameError: name 'send_from_directory' is not defined
+2025-06-16 08:45:28,737 - monitoring_dashboard - ERROR - log_exception:875 - Exception on /tasks [GET]
+Traceback (most recent call last):
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 291, in tasks_page
+    return send_from_directory(template_dir, 'tasks.html')
+           ^^^^^^^^^^^^^^^^^^^
+NameError: name 'send_from_directory' is not defined
+2025-06-16 08:45:33,143 - monitoring_dashboard - ERROR - log_exception:875 - Exception on /tasks [GET]
+Traceback (most recent call last):
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 291, in tasks_page
+    return send_from_directory(template_dir, 'tasks.html')
+           ^^^^^^^^^^^^^^^^^^^
+NameError: name 'send_from_directory' is not defined
+2025-06-16 09:55:52,863 - monitoring_dashboard - ERROR - api_run_task:282 - Error running task Data_Refresh: expected str, bytes or os.PathLike object, not NoneType
+Traceback (most recent call last):
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 259, in api_run_task
+    process = subprocess.Popen(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 1462, in _execute_child
+    args = list2cmdline(args)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 608, in list2cmdline
+    for arg in map(os.fsdecode, seq):
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 859, in fsdecode
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-06-16 09:57:58,813 - monitoring_dashboard - ERROR - api_run_task:282 - Error running task Data_Refresh: expected str, bytes or os.PathLike object, not NoneType
+Traceback (most recent call last):
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 259, in api_run_task
+    process = subprocess.Popen(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 1462, in _execute_child
+    args = list2cmdline(args)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 608, in list2cmdline
+    for arg in map(os.fsdecode, seq):
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 859, in fsdecode
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-06-16 10:03:54,548 - monitoring_dashboard - ERROR - api_create_task:699 - Error creating task: 'schedule_type'
+Traceback (most recent call last):
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 692, in api_create_task
+    scheduler.task_manager.add_schedule(task_id, data['schedule_type'], data['schedule_config'])
+                                                 ~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'schedule_type'

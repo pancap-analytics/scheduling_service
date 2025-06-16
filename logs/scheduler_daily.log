@@ -1,0 +1,804 @@
+2025-06-16 01:45:02,701 - apscheduler.executors.default - INFO - run_job:129 - Running job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-16 05:45:02 CDT)" (scheduled at 2025-06-16 01:45:02.683180-05:00)
+2025-06-16 01:45:02,757 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 63)
+2025-06-16 01:45:03,125 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 01:45:03,129 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-16 01:45:03,129 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-16 01:45:03,130 - apscheduler.executors.default - INFO - run_job:156 - Job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-16 05:45:02 CDT)" executed successfully
+2025-06-16 01:50:03,133 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_0
+2025-06-16 01:50:03,133 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-16 01:50:03 CDT], next run at: 2025-06-16 01:50:03 CDT)" (scheduled at 2025-06-16 01:50:03.129756-05:00)
+2025-06-16 01:50:03,166 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 64)
+2025-06-16 01:50:03,337 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 01:50:03,345 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-16 01:50:03,345 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-16 01:50:03,346 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-16 01:50:03 CDT], next run at: 2025-06-16 01:50:03 CDT)" executed successfully
+2025-06-16 01:55:03,360 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_1
+2025-06-16 01:55:03,360 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-16 01:55:03 CDT], next run at: 2025-06-16 01:55:03 CDT)" (scheduled at 2025-06-16 01:55:03.345627-05:00)
+2025-06-16 01:55:03,393 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 65)
+2025-06-16 01:55:03,552 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 01:55:03,556 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-16 01:55:03,557 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-16 01:55:03,557 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-16 01:55:03 CDT], next run at: 2025-06-16 01:55:03 CDT)" executed successfully
+2025-06-16 02:00:03,557 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_2
+2025-06-16 02:00:03,557 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-16 02:00:03 CDT], next run at: 2025-06-16 02:00:03 CDT)" (scheduled at 2025-06-16 02:00:03.556400-05:00)
+2025-06-16 02:00:03,586 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 66)
+2025-06-16 02:00:03,720 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 02:00:03,728 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-16 02:00:03 CDT], next run at: 2025-06-16 02:00:03 CDT)" executed successfully
+2025-06-16 05:45:02,687 - apscheduler.executors.default - INFO - run_job:129 - Running job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-16 09:45:02 CDT)" (scheduled at 2025-06-16 05:45:02.683180-05:00)
+2025-06-16 05:45:02,761 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 67)
+2025-06-16 05:45:03,007 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 05:45:03,013 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-16 05:45:03,013 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-16 05:45:03,013 - apscheduler.executors.default - INFO - run_job:156 - Job "Data_Refresh (trigger: interval[4:00:00], next run at: 2025-06-16 09:45:02 CDT)" executed successfully
+2025-06-16 05:50:03,015 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_0
+2025-06-16 05:50:03,016 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-16 05:50:03 CDT], next run at: 2025-06-16 05:50:03 CDT)" (scheduled at 2025-06-16 05:50:03.013180-05:00)
+2025-06-16 05:50:03,069 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 68)
+2025-06-16 05:50:03,269 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 05:50:03,273 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-16 05:50:03,273 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-16 05:50:03,273 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-16 05:50:03 CDT], next run at: 2025-06-16 05:50:03 CDT)" executed successfully
+2025-06-16 05:55:03,287 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_1
+2025-06-16 05:55:03,287 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-16 05:55:03 CDT], next run at: 2025-06-16 05:55:03 CDT)" (scheduled at 2025-06-16 05:55:03.273614-05:00)
+2025-06-16 05:55:03,345 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 69)
+2025-06-16 05:55:03,537 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 05:55:03,542 - production_scheduler_core - INFO - execute_task:342 - Retrying task Data_Refresh in 300 seconds
+2025-06-16 05:55:03,543 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-16 05:55:03,546 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-16 05:55:03 CDT], next run at: 2025-06-16 05:55:03 CDT)" executed successfully
+2025-06-16 06:00:00,007 - apscheduler.executors.default - INFO - run_job:129 - Running job "Daily_Report_Generator (trigger: cron[hour='6', minute='0'], next run at: 2025-06-17 06:00:00 CDT)" (scheduled at 2025-06-16 06:00:00-05:00)
+2025-06-16 06:00:00,081 - production_scheduler_core - INFO - execute_task:252 - Executing task Daily_Report_Generator (Run ID: 70)
+2025-06-16 06:00:00,304 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-16 06:00:00,312 - production_scheduler_core - INFO - execute_task:342 - Retrying task Daily_Report_Generator in 300 seconds
+2025-06-16 06:00:00,319 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-16 06:00:00,319 - apscheduler.executors.default - INFO - run_job:156 - Job "Daily_Report_Generator (trigger: cron[hour='6', minute='0'], next run at: 2025-06-17 06:00:00 CDT)" executed successfully
+2025-06-16 06:00:03,555 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_2_2
+2025-06-16 06:00:03,555 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-16 06:00:03 CDT], next run at: 2025-06-16 06:00:03 CDT)" (scheduled at 2025-06-16 06:00:03.542739-05:00)
+2025-06-16 06:00:03,573 - production_scheduler_core - INFO - execute_task:252 - Executing task Data_Refresh (Run ID: 71)
+2025-06-16 06:00:03,715 - production_scheduler_core - ERROR - execute_task:329 - Task Data_Refresh failed with exit code 2
+2025-06-16 06:00:03,725 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-16 06:00:03 CDT], next run at: 2025-06-16 06:00:03 CDT)" executed successfully
+2025-06-16 06:05:00,331 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_1_0
+2025-06-16 06:05:00,331 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-16 06:05:00 CDT], next run at: 2025-06-16 06:05:00 CDT)" (scheduled at 2025-06-16 06:05:00.317920-05:00)
+2025-06-16 06:05:00,365 - production_scheduler_core - INFO - execute_task:252 - Executing task Daily_Report_Generator (Run ID: 72)
+2025-06-16 06:05:00,519 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-16 06:05:00,524 - production_scheduler_core - INFO - execute_task:342 - Retrying task Daily_Report_Generator in 300 seconds
+2025-06-16 06:05:00,524 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "ProductionScheduler.execute_task" to job store "default"
+2025-06-16 06:05:00,524 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-16 06:05:00 CDT], next run at: 2025-06-16 06:05:00 CDT)" executed successfully
+2025-06-16 06:10:00,529 - apscheduler.scheduler - INFO - remove_job:728 - Removed job retry_1_1
+2025-06-16 06:10:00,529 - apscheduler.executors.default - INFO - run_job:129 - Running job "ProductionScheduler.execute_task (trigger: date[2025-06-16 06:10:00 CDT], next run at: 2025-06-16 06:10:00 CDT)" (scheduled at 2025-06-16 06:10:00.524204-05:00)
+2025-06-16 06:10:00,637 - production_scheduler_core - INFO - execute_task:252 - Executing task Daily_Report_Generator (Run ID: 73)
+2025-06-16 06:10:00,864 - production_scheduler_core - ERROR - execute_task:329 - Task Daily_Report_Generator failed with exit code 2
+2025-06-16 06:10:00,881 - apscheduler.executors.default - INFO - run_job:156 - Job "ProductionScheduler.execute_task (trigger: date[2025-06-16 06:10:00 CDT], next run at: 2025-06-16 06:10:00 CDT)" executed successfully
+2025-06-16 08:40:14,949 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:40:14] "[33mGET /tasks HTTP/1.1[0m" 404 -
+2025-06-16 08:40:20,626 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 08:40:20] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:40:20,650 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 08:40:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-16 08:40:24,916 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 08:40:24] "GET / HTTP/1.1" 200 -
+2025-06-16 08:40:24,952 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 08:40:24] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:40:25,124 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 08:40:25] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:40:25,125 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 08:40:25] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:40:34,935 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 08:40:34] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:40:34,993 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 08:40:34] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:40:34,993 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 08:40:34] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:40:42,767 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 08:40:42] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:40:55,487 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:40:55] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:40:55,531 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:40:55] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:40:55,804 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:40:55] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:41:05,795 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:05] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:41:05,855 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:05] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:41:05,856 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:05] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:41:15,508 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:15] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:41:15,782 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:15] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:41:15,825 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:15] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:41:26,601 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:26] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:41:26,700 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:26] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:41:26,702 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:26] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:41:36,287 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:36] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:41:36,595 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:36] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:41:36,645 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:36] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:41:46,597 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:46] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:41:46,647 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:46] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:41:46,651 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:46] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:41:56,294 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:56] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:41:56,602 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:56] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:41:56,645 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:41:56] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:42:06,606 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:42:06] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:42:06,644 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:42:06] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:42:06,647 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:42:06] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:42:43,296 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:42:43] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:42:43,598 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:42:43] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:42:43,681 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:42:43] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:43:43,609 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:43:43] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:43:43,658 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:43:43] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:43:43,763 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:43:43] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:44:35,615 - production_scheduler_core - INFO - __init__:59 - Production scheduler initialized
+2025-06-16 08:44:35,623 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 08:44:35,623 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Daily_Report_Generator (ID: 1)
+2025-06-16 08:44:35,623 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 08:44:35,623 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Data_Refresh (ID: 2)
+2025-06-16 08:44:35,624 - production_scheduler_core - INFO - load_tasks_from_db:145 - Loaded 2 tasks from database
+2025-06-16 08:44:35,624 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Daily_Report_Generator" to job store "default"
+2025-06-16 08:44:35,624 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Data_Refresh" to job store "default"
+2025-06-16 08:44:35,624 - apscheduler.scheduler - INFO - start:214 - Scheduler started
+2025-06-16 08:44:35,624 - production_scheduler_core - INFO - start:402 - Scheduler started successfully
+2025-06-16 08:44:39,497 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:44:39] "GET / HTTP/1.1" 200 -
+2025-06-16 08:44:39,523 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:44:39] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:44:39,759 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:44:39] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:44:39,825 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:44:39] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:44:49,824 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:44:49] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:44:49,919 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:44:49] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:44:49,919 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:44:49] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:44:51,416 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:44:51] "GET /api/runs/recent HTTP/1.1" 200 -
+2025-06-16 08:44:55,876 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:44:55] "GET /api/alerts HTTP/1.1" 200 -
+2025-06-16 08:44:58,701 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:44:58] "GET /api/health HTTP/1.1" 200 -
+2025-06-16 08:45:07,948 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:45:07] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:45:10,396 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:45:10] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:45:17,649 - monitoring_dashboard - ERROR - log_exception:875 - Exception on /tasks [GET]
+Traceback (most recent call last):
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 291, in tasks_page
+    return send_from_directory(template_dir, 'tasks.html')
+           ^^^^^^^^^^^^^^^^^^^
+NameError: name 'send_from_directory' is not defined
+2025-06-16 08:45:17,668 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:45:17] "[35m[1mGET /tasks HTTP/1.1[0m" 500 -
+2025-06-16 08:45:28,737 - monitoring_dashboard - ERROR - log_exception:875 - Exception on /tasks [GET]
+Traceback (most recent call last):
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 291, in tasks_page
+    return send_from_directory(template_dir, 'tasks.html')
+           ^^^^^^^^^^^^^^^^^^^
+NameError: name 'send_from_directory' is not defined
+2025-06-16 08:45:28,742 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:45:28] "[35m[1mGET /tasks HTTP/1.1[0m" 500 -
+2025-06-16 08:45:33,143 - monitoring_dashboard - ERROR - log_exception:875 - Exception on /tasks [GET]
+Traceback (most recent call last):
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 291, in tasks_page
+    return send_from_directory(template_dir, 'tasks.html')
+           ^^^^^^^^^^^^^^^^^^^
+NameError: name 'send_from_directory' is not defined
+2025-06-16 08:45:33,148 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:45:33] "[35m[1mGET /tasks HTTP/1.1[0m" 500 -
+2025-06-16 08:47:05,964 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:47:05] "GET /api/overview HTTP/1.1" 200 -
+2025-06-16 08:47:06,071 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:47:06] "GET /api/runs/recent?limit=10 HTTP/1.1" 200 -
+2025-06-16 08:47:06,260 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:47:06] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 08:47:07,284 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 08:47:07] "GET /api/runs/recent HTTP/1.1" 200 -
+2025-06-16 09:11:13,644 - production_scheduler_core - INFO - __init__:59 - Production scheduler initialized
+2025-06-16 09:11:13,679 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 09:11:13,679 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Daily_Report_Generator (ID: 1)
+2025-06-16 09:11:13,679 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 09:11:13,679 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Data_Refresh (ID: 2)
+2025-06-16 09:11:13,679 - production_scheduler_core - INFO - load_tasks_from_db:145 - Loaded 2 tasks from database
+2025-06-16 09:11:13,679 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Daily_Report_Generator" to job store "default"
+2025-06-16 09:11:13,679 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Data_Refresh" to job store "default"
+2025-06-16 09:11:13,690 - apscheduler.scheduler - INFO - start:214 - Scheduler started
+2025-06-16 09:11:13,690 - production_scheduler_core - INFO - start:402 - Scheduler started successfully
+2025-06-16 09:11:30,692 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:11:30] "GET / HTTP/1.1" 200 -
+2025-06-16 09:11:30,876 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:11:30] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:11:31,723 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:11:31] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:11:41,020 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:11:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:11:42,035 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:11:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:11:45,944 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:11:45] "GET /tasks HTTP/1.1" 200 -
+2025-06-16 09:11:46,227 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:11:46] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:11:48,256 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:11:48] "GET /logs HTTP/1.1" 200 -
+2025-06-16 09:11:48,292 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:11:48] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:11:50,895 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:11:50] "GET /settings HTTP/1.1" 200 -
+2025-06-16 09:12:21,133 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:12:21] "[36mGET /logs HTTP/1.1[0m" 304 -
+2025-06-16 09:12:21,437 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:12:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:12:23,342 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:12:23] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:12:23,413 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:12:23] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:12:53,352 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:12:53] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:13:00,795 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:00] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:13:01,062 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:13:01,908 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:01] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:13:11,580 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:13:12,300 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:13:21,596 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:13:22,620 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:22] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:13:31,591 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:31] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:13:32,290 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:32] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:13:41,589 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:13:42,609 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:13:51,597 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:51] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:13:52,296 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:13:52] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:14:01,595 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:14:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:14:02,625 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:14:02] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:14:11,575 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:14:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:14:12,285 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:14:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:14:43,579 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:14:43] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:14:44,580 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:14:44] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:15:43,571 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:15:43] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:15:44,285 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:15:44] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:16:43,596 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:16:43] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:16:44,624 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:16:44] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:17:03,582 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:17:03] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:17:04,281 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:17:04] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:17:05,582 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:17:05] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:17:05,667 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:17:05] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:17:35,599 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:17:35] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:18:05,913 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:18:05] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:18:35,597 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:18:35] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:19:05,916 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:19:05] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:19:35,599 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:19:35] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:20:05,901 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:20:05] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:20:35,591 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:20:35] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:21:05,917 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:21:05] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:21:35,601 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:21:35] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:21:41,131 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:21:41] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 503 -
+2025-06-16 09:22:15,651 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:15] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:22:35,895 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:35] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:22:39,349 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:39] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 503 -
+2025-06-16 09:22:42,121 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:42] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:22:42,129 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:42] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:22:44,627 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:44] "[36mGET /logs HTTP/1.1[0m" 304 -
+2025-06-16 09:22:44,931 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:44] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:22:46,372 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:46] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:22:46,622 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:46] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:22:47,484 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:47] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:22:56,699 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:56] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:22:57,399 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:22:57] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:23:06,709 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:06] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:23:07,714 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:07] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:23:16,687 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:16] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:23:17,392 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:17] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:23:26,706 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:26] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:23:27,709 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:27] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:23:37,584 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:37] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:23:38,271 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:38] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:23:49,114 - production_scheduler_core - INFO - __init__:59 - Production scheduler initialized
+2025-06-16 09:23:49,169 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 09:23:49,169 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Daily_Report_Generator (ID: 1)
+2025-06-16 09:23:49,169 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 09:23:49,169 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Data_Refresh (ID: 2)
+2025-06-16 09:23:49,169 - production_scheduler_core - INFO - load_tasks_from_db:145 - Loaded 2 tasks from database
+2025-06-16 09:23:49,171 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Daily_Report_Generator" to job store "default"
+2025-06-16 09:23:49,171 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Data_Refresh" to job store "default"
+2025-06-16 09:23:49,171 - apscheduler.scheduler - INFO - start:214 - Scheduler started
+2025-06-16 09:23:49,171 - production_scheduler_core - INFO - start:402 - Scheduler started successfully
+2025-06-16 09:23:56,809 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:56] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:23:57,169 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:57] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:23:58,069 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:23:58] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:24:00,978 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:24:00] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:24:01,035 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:24:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:24:01,783 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:24:01] "[36mGET /logs HTTP/1.1[0m" 304 -
+2025-06-16 09:24:02,091 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:24:02] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:24:02,900 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:24:02] "[36mGET /settings HTTP/1.1[0m" 304 -
+2025-06-16 09:24:03,630 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:24:03] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:24:03,653 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:24:03] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:24:33,940 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:24:33] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:24:36,894 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:24:36] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 503 -
+2025-06-16 09:25:03,961 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:25:03] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:25:26,627 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:25:26] "GET / HTTP/1.1" 200 -
+2025-06-16 09:25:26,654 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:25:26] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:25:27,669 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:25:27] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:25:32,454 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:25:32] "GET /tasks HTTP/1.1" 200 -
+2025-06-16 09:25:32,471 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:25:32] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:25:34,266 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:25:34] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:25:50,987 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:25:50] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 503 -
+2025-06-16 09:25:53,539 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:25:53] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 503 -
+2025-06-16 09:26:03,273 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:26:03] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:26:03,939 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:26:03] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:26:33,272 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:26:33] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:26:34,267 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:26:34] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:27:03,265 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:27:03] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:27:04,579 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:27:04] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:27:33,269 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:27:33] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:27:34,276 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:27:34] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:28:03,263 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:28:03] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:28:33,270 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:28:33] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:28:35,591 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:28:35] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:29:03,279 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:29:03] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:29:14,675 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:29:14] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:29:14,687 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:29:14] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:29:36,586 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:29:36] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:29:45,267 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:29:45] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:30:15,269 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:30:15] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:30:37,583 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:30:37] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:30:45,279 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:30:45] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:31:15,263 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:31:15] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:31:38,579 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:31:38] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:31:45,267 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:31:45] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:32:15,263 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:32:15] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:32:39,569 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:32:39] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:32:45,281 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:32:45] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:33:40,585 - werkzeug - INFO - _log:97 - 127.0.0.1 - - [16/Jun/2025 09:33:40] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:33:43,269 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:33:43] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:34:26,399 - production_scheduler_core - INFO - __init__:59 - Production scheduler initialized
+2025-06-16 09:34:26,399 - LocalSchedulerService - INFO - start:211 - Connecting scheduler to the dashboard...
+2025-06-16 09:34:26,399 - monitoring_dashboard - INFO - set_scheduler:45 - Scheduler instance set in dashboard
+2025-06-16 09:34:26,399 - LocalSchedulerService - INFO - run_dashboard:217 - Starting dashboard server...
+2025-06-16 09:34:26,399 - LocalSchedulerService - INFO - start:230 - Dashboard thread started
+2025-06-16 09:34:26,399 - LocalSchedulerService - INFO - start:233 - Starting scheduler main loop...
+2025-06-16 09:34:26,399 - werkzeug - INFO - _log:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.0.10.226:5001
+2025-06-16 09:34:26,399 - werkzeug - INFO - _log:97 - [33mPress CTRL+C to quit[0m
+2025-06-16 09:34:26,440 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 09:34:26,440 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Daily_Report_Generator (ID: 1)
+2025-06-16 09:34:26,440 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 09:34:26,440 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Data_Refresh (ID: 2)
+2025-06-16 09:34:26,440 - production_scheduler_core - INFO - load_tasks_from_db:145 - Loaded 2 tasks from database
+2025-06-16 09:34:26,448 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Daily_Report_Generator" to job store "default"
+2025-06-16 09:34:26,449 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Data_Refresh" to job store "default"
+2025-06-16 09:34:26,449 - apscheduler.scheduler - INFO - start:214 - Scheduler started
+2025-06-16 09:34:26,449 - production_scheduler_core - INFO - start:402 - Scheduler started successfully
+2025-06-16 09:34:28,519 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:28] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:34:28,546 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:28] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:34:29,864 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:29] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:34:29,874 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:29] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:34:42,910 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:42] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:34:42,936 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:42] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:34:43,944 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:43] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:34:52,636 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:52] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:34:52,662 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:52] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:34:53,357 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:53] "GET /logs HTTP/1.1" 200 -
+2025-06-16 09:34:53,382 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:53] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:34:54,632 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:54] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:34:54,659 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:54] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:34:56,475 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:56] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:34:56,491 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:34:56] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:35:26,485 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:35:26] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:35:44,194 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:35:44] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 503 -
+2025-06-16 09:35:56,485 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:35:56] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:36:26,489 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:36:26] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:36:27,059 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:36:27] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 503 -
+2025-06-16 09:36:56,491 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:36:56] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:37:08,627 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:37:08] "[35m[1mPUT /api/tasks/Data_Refresh HTTP/1.1[0m" 503 -
+2025-06-16 09:37:26,486 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:37:26] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:37:35,841 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:37:35] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:37:35,874 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:37:35] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:37:36,879 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:37:36] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:37:45,854 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:37:45] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:37:46,858 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:37:46] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:37:55,854 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:37:55] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:37:56,859 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:37:56] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:38:05,852 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:38:05] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:38:06,859 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:38:06] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:38:13,074 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:38:13] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:38:13,089 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:38:13] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:38:14,110 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:38:14] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:38:16,959 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:38:16] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:38:16,982 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:38:16] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:38:19,404 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:38:19] "[33mPOST /api/tasks/Data_Refresh/run HTTP/1.1[0m" 404 -
+2025-06-16 09:38:47,532 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:38:47] "[33mPOST /api/tasks/Data_Refresh/run HTTP/1.1[0m" 404 -
+2025-06-16 09:38:47,533 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:38:47] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:08,089 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:08] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:39:08,120 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:08] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:09,134 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:09] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:39:09,881 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:09] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:39:09,902 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:09] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:10,341 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:10] "[36mGET /logs HTTP/1.1[0m" 304 -
+2025-06-16 09:39:10,363 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:10] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:10,700 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:10] "GET /settings HTTP/1.1" 200 -
+2025-06-16 09:39:11,714 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:11] "[36mGET /logs HTTP/1.1[0m" 304 -
+2025-06-16 09:39:11,734 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:17,974 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:17] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:39:18,004 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:18] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:18,534 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:18] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:39:18,556 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:18] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:19,559 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:19] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:39:28,565 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:28] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:29,572 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:29] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:39:38,558 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:38] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:39,579 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:39] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:39:48,559 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:48] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:49,560 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:49] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:39:58,559 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:58] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:39:59,607 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:39:59] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:40:08,540 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:40:08] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:40:09,586 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:40:09] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:40:09,975 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:40:09] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:40:10,005 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:40:10] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:40:21,515 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:40:21] "[35m[1mPUT /api/tasks/Data_Refresh HTTP/1.1[0m" 503 -
+2025-06-16 09:40:24,982 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:40:24] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:40:24,996 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:40:24] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:40:54,989 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:40:54] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:41:24,991 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:41:24] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:41:54,992 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:41:54] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:42:24,991 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:42:24] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:42:54,989 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:42:54] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:43:24,994 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:43:24] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:43:55,714 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:43:55] "[33mPOST /api/tasks/Data_Refresh/run HTTP/1.1[0m" 404 -
+2025-06-16 09:43:55,714 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:43:55] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:44:08,987 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:08] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 503 -
+2025-06-16 09:44:11,593 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:11] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:44:11,618 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:44:12,623 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:44:21,616 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:44:22,639 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:22] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:44:31,615 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:31] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:44:32,624 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:32] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:44:41,613 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:44:42,628 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:44:51,617 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:51] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:44:52,629 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:44:52] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:45:01,612 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:45:02,652 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:02] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:45:11,611 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:45:12,619 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:45:21,613 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:45:22,618 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:22] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:45:31,614 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:31] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:45:32,628 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:32] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:45:41,618 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:45:42,637 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:45:51,618 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:51] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:45:52,619 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:45:52] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:46:01,628 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:46:02,678 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:02] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:46:11,618 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:46:12,629 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:46:21,605 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:46:22,612 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:22] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:46:31,608 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:31] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:46:32,618 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:32] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:46:41,613 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:46:42,623 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:46:51,616 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:51] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:46:52,621 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:46:52] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:47:01,619 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:47:02,637 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:02] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:47:11,618 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:47:12,631 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:47:21,608 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:47:22,632 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:22] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:47:31,614 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:31] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:47:32,681 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:32] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:47:41,608 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:47:42,618 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:47:51,609 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:51] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:47:52,624 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:47:52] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:48:01,615 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:48:02,661 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:02] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:48:11,615 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:48:12,643 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:48:21,618 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:48:22,628 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:22] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:48:31,619 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:31] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:48:32,636 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:32] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:48:41,633 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:48:42,648 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:48:51,610 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:51] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:48:52,622 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:48:52] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:49:01,626 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:49:02,649 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:02] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:49:12,271 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:12] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:49:13,285 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:13] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:49:22,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:22] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:49:23,293 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:23] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:49:32,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:32] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:49:33,288 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:33] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:49:42,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:42] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:49:43,286 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:43] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:49:52,268 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:52] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:49:53,292 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:49:53] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:50:02,268 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:02] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:50:03,279 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:03] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:50:12,268 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:12] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:50:13,277 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:13] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:50:22,273 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:22] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:50:23,298 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:23] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:50:32,271 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:32] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:50:33,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:33] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:50:42,269 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:42] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:50:43,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:43] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:50:52,268 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:52] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:50:53,289 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:50:53] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:51:02,282 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:02] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:51:03,302 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:03] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:51:06,406 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:06] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:51:06,434 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:06] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:51:07,182 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:07] "[36mGET /logs HTTP/1.1[0m" 304 -
+2025-06-16 09:51:07,199 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:07] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:51:07,763 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:07] "[36mGET /settings HTTP/1.1[0m" 304 -
+2025-06-16 09:51:08,321 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:08] "[36mGET /logs HTTP/1.1[0m" 304 -
+2025-06-16 09:51:08,347 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:08] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:51:08,693 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:08] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:51:08,722 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:08] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:51:09,060 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:09] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:51:09,078 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:09] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:51:09,754 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:09] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:51:10,089 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:10] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:51:19,087 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:19] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:51:20,088 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:20] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:51:29,074 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:29] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:51:30,083 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:30] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:51:39,087 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:39] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:51:40,088 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:40] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:51:49,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:49] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:51:50,288 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:50] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:51:59,271 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:51:59] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:52:00,281 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:00] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:52:09,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:09] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:52:10,304 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:10] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:52:11,654 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:11] "GET / HTTP/1.1" 200 -
+2025-06-16 09:52:11,688 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:52:12,695 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:52:19,268 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:19] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:52:20,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:20] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:52:21,678 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:52:22,688 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:22] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:52:29,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:29] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:52:30,293 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:30] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:52:31,683 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:31] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:52:32,706 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:32] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:52:39,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:39] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:52:40,285 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:40] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:52:41,677 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:52:42,713 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:52:51,685 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:51] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:52:52,700 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:52:52] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:53:01,678 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:53:02,736 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:02] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:53:11,674 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:53:12,684 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:53:21,673 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:53:22,693 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:22] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:53:31,671 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:31] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:53:32,694 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:32] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:53:40,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:40] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:53:41,305 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:41] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:53:41,690 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:53:42,702 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:53:51,674 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:51] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:53:52,683 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:53:52] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:54:01,674 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:54:02,719 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:02] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:54:11,675 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:54:12,686 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:54:21,690 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:54:22,698 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:22] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:54:31,675 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:31] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:54:32,687 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:32] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:54:41,279 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:54:41,677 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:54:42,308 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:54:43,338 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:43] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:54:51,675 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:51] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:54:52,688 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:54:52] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:55:01,686 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:01] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:55:02,728 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:02] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:55:11,678 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:11] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:55:12,687 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:12] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:55:21,680 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:55:22,688 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:22] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:55:36,668 - production_scheduler_core - INFO - __init__:59 - Production scheduler initialized
+2025-06-16 09:55:36,668 - LocalSchedulerService - INFO - start:201 - Connecting scheduler to the dashboard...
+2025-06-16 09:55:36,668 - monitoring_dashboard - INFO - set_scheduler:45 - Scheduler instance set in dashboard
+2025-06-16 09:55:36,668 - LocalSchedulerService - INFO - run_dashboard:207 - Starting dashboard server...
+2025-06-16 09:55:36,668 - LocalSchedulerService - INFO - start:220 - Dashboard thread started
+2025-06-16 09:55:36,668 - LocalSchedulerService - INFO - start:223 - Starting scheduler main loop...
+2025-06-16 09:55:36,678 - werkzeug - INFO - _log:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.0.10.226:5001
+2025-06-16 09:55:36,678 - werkzeug - INFO - _log:97 - [33mPress CTRL+C to quit[0m
+2025-06-16 09:55:36,718 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 09:55:36,718 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Daily_Report_Generator (ID: 1)
+2025-06-16 09:55:36,718 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 09:55:36,718 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Data_Refresh (ID: 2)
+2025-06-16 09:55:36,718 - production_scheduler_core - INFO - load_tasks_from_db:145 - Loaded 2 tasks from database
+2025-06-16 09:55:36,718 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Daily_Report_Generator" to job store "default"
+2025-06-16 09:55:36,721 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Data_Refresh" to job store "default"
+2025-06-16 09:55:36,721 - apscheduler.scheduler - INFO - start:214 - Scheduler started
+2025-06-16 09:55:36,721 - production_scheduler_core - INFO - start:402 - Scheduler started successfully
+2025-06-16 09:55:41,672 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:55:42,678 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:42] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:55:44,468 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:44] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:55:44,500 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:44] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:55:45,514 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:45] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:55:47,833 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:47] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 09:55:47,846 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:47] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:55:48,855 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:48] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 09:55:50,168 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:50] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 09:55:50,181 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:50] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:55:52,863 - monitoring_dashboard - INFO - api_run_task:239 - Found job 'Data_Refresh' with ID 'task_2'. Triggering manual run.
+2025-06-16 09:55:52,863 - monitoring_dashboard - ERROR - api_run_task:282 - Error running task Data_Refresh: expected str, bytes or os.PathLike object, not NoneType
+Traceback (most recent call last):
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 259, in api_run_task
+    process = subprocess.Popen(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 1462, in _execute_child
+    args = list2cmdline(args)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 608, in list2cmdline
+    for arg in map(os.fsdecode, seq):
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 859, in fsdecode
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-06-16 09:55:52,866 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:55:52] "[35m[1mPOST /api/tasks/Data_Refresh/run HTTP/1.1[0m" 500 -
+2025-06-16 09:56:20,179 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:56:20] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:56:50,177 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:56:50] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:57:00,943 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:57:00] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 503 -
+2025-06-16 09:57:20,182 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:57:20] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:57:28,591 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:57:28] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 503 -
+2025-06-16 09:57:50,178 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:57:50] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:57:53,004 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:57:53] "[35m[1mPUT /api/tasks/Data_Refresh HTTP/1.1[0m" 503 -
+2025-06-16 09:57:58,812 - monitoring_dashboard - INFO - api_run_task:239 - Found job 'Data_Refresh' with ID 'task_2'. Triggering manual run.
+2025-06-16 09:57:58,813 - monitoring_dashboard - ERROR - api_run_task:282 - Error running task Data_Refresh: expected str, bytes or os.PathLike object, not NoneType
+Traceback (most recent call last):
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 259, in api_run_task
+    process = subprocess.Popen(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 1462, in _execute_child
+    args = list2cmdline(args)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NHillman\AppData\Local\anaconda3\Lib\subprocess.py", line 608, in list2cmdline
+    for arg in map(os.fsdecode, seq):
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 859, in fsdecode
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-06-16 09:57:58,814 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:57:58] "[35m[1mPOST /api/tasks/Data_Refresh/run HTTP/1.1[0m" 500 -
+2025-06-16 09:58:10,133 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:58:10] "[35m[1mPUT /api/tasks/Data_Refresh HTTP/1.1[0m" 503 -
+2025-06-16 09:58:20,183 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:58:20] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:58:50,175 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:58:50] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:59:20,178 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:59:20] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 09:59:50,178 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 09:59:50] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:00:20,191 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:00:20] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:00:50,183 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:00:50] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:01:20,185 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:01:20] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:01:50,268 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:01:50] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:02:20,265 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:02:20] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:02:52,421 - production_scheduler_core - INFO - __init__:59 - Production scheduler initialized
+2025-06-16 10:02:52,427 - LocalSchedulerService - INFO - start:197 - Injecting scheduler into dashboard application context...
+2025-06-16 10:02:52,427 - LocalSchedulerService - INFO - run_dashboard:203 - Starting dashboard server...
+2025-06-16 10:02:52,427 - LocalSchedulerService - INFO - start:215 - Dashboard thread started
+2025-06-16 10:02:52,428 - LocalSchedulerService - INFO - start:218 - Starting scheduler main loop...
+2025-06-16 10:02:52,428 - werkzeug - INFO - _log:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.0.10.226:5001
+2025-06-16 10:02:52,437 - werkzeug - INFO - _log:97 - [33mPress CTRL+C to quit[0m
+2025-06-16 10:02:52,457 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 10:02:52,457 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Daily_Report_Generator (ID: 1)
+2025-06-16 10:02:52,457 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 10:02:52,457 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Data_Refresh (ID: 2)
+2025-06-16 10:02:52,457 - production_scheduler_core - INFO - load_tasks_from_db:145 - Loaded 2 tasks from database
+2025-06-16 10:02:52,457 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Daily_Report_Generator" to job store "default"
+2025-06-16 10:02:52,457 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Data_Refresh" to job store "default"
+2025-06-16 10:02:52,457 - apscheduler.scheduler - INFO - start:214 - Scheduler started
+2025-06-16 10:02:52,457 - production_scheduler_core - INFO - start:402 - Scheduler started successfully
+2025-06-16 10:02:54,065 - production_scheduler_core - INFO - __init__:59 - Production scheduler initialized
+2025-06-16 10:02:54,065 - LocalSchedulerService - INFO - start:197 - Injecting scheduler into dashboard application context...
+2025-06-16 10:02:54,065 - LocalSchedulerService - INFO - run_dashboard:203 - Starting dashboard server...
+2025-06-16 10:02:54,065 - LocalSchedulerService - INFO - start:215 - Dashboard thread started
+2025-06-16 10:02:54,065 - LocalSchedulerService - INFO - start:218 - Starting scheduler main loop...
+2025-06-16 10:02:54,068 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 10:02:54,068 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Daily_Report_Generator (ID: 1)
+2025-06-16 10:02:54,068 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 10:02:54,068 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Data_Refresh (ID: 2)
+2025-06-16 10:02:54,068 - production_scheduler_core - INFO - load_tasks_from_db:145 - Loaded 2 tasks from database
+2025-06-16 10:02:54,068 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Daily_Report_Generator" to job store "default"
+2025-06-16 10:02:54,068 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Data_Refresh" to job store "default"
+2025-06-16 10:02:54,068 - apscheduler.scheduler - INFO - start:214 - Scheduler started
+2025-06-16 10:02:54,068 - production_scheduler_core - INFO - start:402 - Scheduler started successfully
+2025-06-16 10:02:54,068 - werkzeug - INFO - _log:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.0.10.226:5001
+2025-06-16 10:02:54,068 - werkzeug - INFO - _log:97 - [33mPress CTRL+C to quit[0m
+2025-06-16 10:02:57,685 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:02:57] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:03:02,873 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:02] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 10:03:02,886 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:02] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:03:05,423 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:05] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 10:03:05,424 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:05] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:03:07,209 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:07] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 10:03:07,220 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:07] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 10:03:07,221 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:07] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:03:08,943 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:08] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 10:03:08,955 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:08] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 10:03:08,955 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:08] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:03:10,552 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:10] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 10:03:10,578 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:10] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:03:15,581 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:15] "[36mGET /logs HTTP/1.1[0m" 304 -
+2025-06-16 10:03:15,598 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:15] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:03:16,516 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:16] "[36mGET /settings HTTP/1.1[0m" 304 -
+2025-06-16 10:03:17,361 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:17] "[36mGET /logs HTTP/1.1[0m" 304 -
+2025-06-16 10:03:17,378 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:17] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:03:18,423 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:18] "[33mGET /api/logs/Data_Refresh HTTP/1.1[0m" 404 -
+2025-06-16 10:03:18,958 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:18] "[33mGET /api/logs/Daily_Report_Generator HTTP/1.1[0m" 404 -
+2025-06-16 10:03:34,574 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:34] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 10:03:34,600 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:34] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:03:54,548 - monitoring_dashboard - ERROR - api_create_task:699 - Error creating task: 'schedule_type'
+Traceback (most recent call last):
+  File "C:\SchedulerService\source\monitoring_dashboard.py", line 692, in api_create_task
+    scheduler.task_manager.add_schedule(task_id, data['schedule_type'], data['schedule_config'])
+                                                 ~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'schedule_type'
+2025-06-16 10:03:54,548 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:03:54] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 500 -
+2025-06-16 10:04:04,593 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:04:04] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:04:34,584 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:04:34] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:04:39,589 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:04:39] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 10:04:39,598 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:04:39] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:04:40,144 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:04:40] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 10:04:40,153 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:04:40] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:05:10,159 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:05:10] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:05:40,269 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:05:40] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:06:10,275 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:06:10] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:06:40,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:06:40] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:07:10,270 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:07:10] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:07:18,223 - production_scheduler_core - INFO - __init__:59 - Production scheduler initialized
+2025-06-16 10:07:18,223 - LocalSchedulerService - INFO - start:197 - Injecting scheduler into dashboard application context...
+2025-06-16 10:07:18,223 - LocalSchedulerService - INFO - run_dashboard:203 - Starting dashboard server...
+2025-06-16 10:07:18,223 - LocalSchedulerService - INFO - start:215 - Dashboard thread started
+2025-06-16 10:07:18,223 - LocalSchedulerService - INFO - start:218 - Starting scheduler main loop...
+2025-06-16 10:07:18,231 - werkzeug - INFO - _log:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.0.10.226:5001
+2025-06-16 10:07:18,231 - werkzeug - INFO - _log:97 - [33mPress CTRL+C to quit[0m
+2025-06-16 10:07:18,258 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 10:07:18,258 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Daily_Report_Generator (ID: 1)
+2025-06-16 10:07:18,259 - apscheduler.scheduler - INFO - add_job:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 10:07:18,259 - production_scheduler_core - INFO - schedule_task:180 - Scheduled task: Data_Refresh (ID: 2)
+2025-06-16 10:07:18,259 - production_scheduler_core - WARNING - load_tasks_from_db:143 - Task asdas has no schedule defined
+2025-06-16 10:07:18,259 - production_scheduler_core - INFO - load_tasks_from_db:145 - Loaded 3 tasks from database
+2025-06-16 10:07:18,259 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Daily_Report_Generator" to job store "default"
+2025-06-16 10:07:18,259 - apscheduler.scheduler - INFO - _real_add_job:1090 - Added job "Data_Refresh" to job store "default"
+2025-06-16 10:07:18,260 - apscheduler.scheduler - INFO - start:214 - Scheduler started
+2025-06-16 10:07:18,260 - production_scheduler_core - INFO - start:402 - Scheduler started successfully
+2025-06-16 10:07:22,834 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:07:22] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 10:07:22,838 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:07:22] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:07:24,672 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:07:24] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-16 10:07:24,697 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:07:24] "GET /api/status HTTP/1.1" 200 -
+2025-06-16 10:07:24,698 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:07:24] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:07:28,252 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:07:28] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 10:07:28,277 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:07:28] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:07:30,091 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:07:30] "[36mGET /tasks HTTP/1.1[0m" 304 -
+2025-06-16 10:07:30,100 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:07:30] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:08:00,104 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:08:00] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:08:30,100 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:08:30] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:09:00,104 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:09:00] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:09:30,112 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:09:30] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:10:00,098 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:10:00] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:10:30,108 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:10:30] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:11:00,100 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:11:00] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:11:30,110 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:11:30] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:12:00,102 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:12:00] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:12:30,109 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:12:30] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:13:00,103 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:13:00] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:13:30,107 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:13:30] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:14:00,278 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:14:00] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:14:30,263 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:14:30] "GET /api/tasks HTTP/1.1" 200 -
+2025-06-16 10:15:31,262 - werkzeug - INFO - _log:97 - 10.0.10.226 - - [16/Jun/2025 10:15:31] "GET /api/tasks HTTP/1.1" 200 -

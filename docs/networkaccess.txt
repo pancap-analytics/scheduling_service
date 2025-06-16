@@ -1,0 +1,263 @@
+# Network Access & Firewall Configuration Guide
+
+## Quick Start: Allowing Others to Access Your Scheduler
+
+### Step 1: Find Your Computer's IP Address
+
+1. Open Command Prompt (Win+R, type `cmd`)
+2. Type `ipconfig` and press Enter
+3. Look for "IPv4 Address" under your active network adapter
+4. Example: `192.168.1.100` or `10.0.0.50`
+10.0.10.254
+
+### Step 2: Test Local Access First
+
+1. On your computer, visit: http://localhost:5001
+2. Verify the dashboard loads correctly
+3. Navigate to the new Tasks page at: http://localhost:5001/tasks
+
+### Step 3: Configure Windows Firewall
+
+#### Method 1: Using Windows Defender Firewall GUI (Easier)
+
+1. **Open Windows Defender Firewall**
+   - Press Win+R, type `wf.msc` and press Enter
+   - Or: Control Panel → System and Security → Windows Defender Firewall → Advanced settings
+
+2. **Create Inbound Rule**
+   - Click "Inbound Rules" in left panel
+   - Click "New Rule..." in right panel
+   - Select "Port" and click Next
+   - Select "TCP" and enter "5001" in Specific local ports
+   - Select "Allow the connection"
+   - Choose when to apply the rule:
+     - ✓ Domain (company network)
+     - ✓ Private (home network)
+     - ✗ Public (untrusted networks) - uncheck for security
+   - Name: "Python Scheduler Dashboard"
+   - Description: "Allow access to Python Analytics Scheduler on port 5001"
+   - Click Finish
+
+#### Method 2: Using Command Line (Advanced)
+
+Run as Administrator:
+
+```batch
+REM Allow access from any computer on your network
+netsh advfirewall firewall add rule name="Python Scheduler Dashboard" dir=in action=allow protocol=TCP localport=5001
+
+REM Or limit to specific IP addresses (more secure)
+netsh advfirewall firewall add rule name="Python Scheduler Dashboard" dir=in action=allow protocol=TCP localport=5001 remoteip=192.168.1.50,192.168.1.51
+
+REM Or limit to your local subnet only
+netsh advfirewall firewall add rule name="Python Scheduler Dashboard" dir=in action=allow protocol=TCP localport=5001 remoteip=192.168.1.0/24
+```
+
+### Step 4: Share Access Information
+
+Tell your colleagues to access the scheduler at:
+```
+http://10.0.10.254:5001
+```
+
+For example:
+- http://192.168.1.100:5001 (main dashboard)
+- http://192.168.1.100:5001/tasks (task management)
+
+---
+
+## Basic Usage Guide for Network Users
+
+### For Users Accessing the Scheduler
+
+#### 1. **Accessing the Dashboard**
+   - Open a web browser
+   - Enter the URL provided by the scheduler host
+   - Example: `http://10.0.10.125:5001`
+
+#### 2. **Main Dashboard Features**
+   - **System Status**: View if scheduler is running
+   - **Active Tasks**: See currently scheduled tasks
+   - **Recent Runs**: Check execution history
+   - **Resource Usage**: Monitor CPU/memory usage
+
+#### 3. **Managing Tasks** (New Tasks Page)
+   
+   **To Add a New Task:**
+   1. Click "Tasks" in navigation
+   2. Click "+ Add New Task" button
+   3. Fill in the form:
+      - **Task Name**: Unique identifier (no spaces)
+      - **Script Path**: Full path to Python script
+      - **Schedule Type**: Choose scheduling method
+      - **Python Path**: (Optional) Custom Python interpreter
+   4. Click "Save Task"
+
+   **Scheduling Options:**
+   - **One Time**: Run once at specific date/time
+   - **Daily**: Run every day at specified time
+   - **Weekly**: Run on selected days of week
+   - **Monthly**: Run on specific day of month
+   - **Interval**: Run every X minutes/hours
+   - **Advanced (Cron)**: Use cron expressions
+
+   **To Run a Task Manually:**
+   - Find the task in the list
+   - Click "Run Now" button
+   - Task will execute on the host computer
+
+   **To Edit/Delete Tasks:**
+   - Use the Edit/Delete buttons in the Actions column
+
+---
+
+## Security Considerations
+
+### Current State (No Authentication)
+⚠️ **WARNING**: Anyone who can access the URL has full control:
+- Can view all scheduled tasks
+- Can run any task immediately
+- Can create/modify/delete tasks
+- Can see execution logs and results
+
+### Recommended Security Measures
+
+#### 1. **Network Isolation**
+- Only allow access from trusted network segments
+- Use VLANs to isolate the scheduler
+
+#### 2. **IP Whitelisting**
+```batch
+REM Remove the open rule
+netsh advfirewall firewall delete rule name="Python Scheduler Dashboard"
+
+REM Add rule for specific IPs only
+netsh advfirewall firewall add rule name="Python Scheduler Dashboard" dir=in action=allow protocol=TCP localport=5001 remoteip=192.168.1.50,192.168.1.51,192.168.1.52
+```
+
+#### 3. **VPN Access Only**
+- Require VPN connection to access the scheduler
+- Don't expose port 5001 to the entire network
+
+#### 4. **Monitor Access**
+Check who's accessing your scheduler:
+```batch
+REM View current connections
+netstat -an | findstr :5001
+
+REM Check firewall logs
+eventvwr.msc
+```
+
+---
+
+## Troubleshooting Network Access
+
+### Common Issues and Solutions
+
+#### "Cannot reach the page" error
+1. **Check if service is running**:
+   ```batch
+   netstat -an | findstr :5001
+   ```
+   Should show: `0.0.0.0:5001 LISTENING`
+
+2. **Verify firewall rule exists**:
+   ```batch
+   netsh advfirewall firewall show rule name="Python Scheduler Dashboard"
+   ```
+
+3. **Test from the host computer first**:
+   - http://localhost:5001 should work
+   - http://YOUR_IP:5001 should also work locally
+
+#### "Connection refused" error
+- Scheduler might not be running
+- Check Windows Task Scheduler or service status
+- Review logs at `C:\SchedulerService\logs\`
+
+#### Can access dashboard but not tasks page
+- Clear browser cache
+- Try incognito/private browsing mode
+- Check browser console for errors (F12)
+
+---
+
+## Setting Up the Tasks Page
+
+### Step 1: Update Your Dashboard Routes
+
+Add this route to your `monitoring_dashboard.py` file:
+
+```python
+@app.route('/tasks')
+def tasks_page():
+    return send_from_directory('templates', 'tasks.html')
+```
+
+### Step 2: Create Templates Directory
+
+1. Create folder: `C:\SchedulerService\source\templates`
+2. Save the `tasks.html` file in this directory
+
+### Step 3: Restart the Scheduler
+
+After adding the files, restart your scheduler for changes to take effect.
+
+---
+
+## Usage Examples
+
+### Example 1: Schedule a Daily Report
+1. Navigate to Tasks page
+2. Click "Add New Task"
+3. Fill in:
+   - Name: `Daily_Sales_Report`
+   - Script: `\\FileServer\Reports\sales_report.py`
+   - Schedule: Daily at 6:00 AM
+   - Python: `C:\Python39\python.exe`
+4. Save and the task will run automatically
+
+### Example 2: Run Analysis On-Demand
+1. Create task with "Manual" schedule
+2. Team members can click "Run Now" when needed
+3. Results saved to network location
+
+### Example 3: Multiple Environment Task
+1. Create task pointing to network script
+2. Use network virtual environment:
+   ```
+   Script: \\Server\ML\train_model.py
+   Python: \\Server\ML\venv\Scripts\python.exe
+   Working Dir: \\Server\ML\
+   ```
+
+---
+
+## Quick Reference
+
+### URLs
+- Dashboard: `http://[IP]:5001`
+- Tasks: `http://[IP]:5001/tasks`
+- API: `http://[IP]:5001/api/tasks`
+
+### Firewall Commands
+```batch
+REM View rule
+netsh advfirewall firewall show rule name="Python Scheduler Dashboard"
+
+REM Delete rule
+netsh advfirewall firewall delete rule name="Python Scheduler Dashboard"
+
+REM Add secure rule (specific IPs)
+netsh advfirewall firewall add rule name="Python Scheduler Dashboard" dir=in action=allow protocol=TCP localport=5001 remoteip=192.168.1.50,192.168.1.100-192.168.1.110
+```
+
+### Service Commands
+```batch
+REM Check if running
+sc query PythonAnalyticsSchedulerLocal
+
+REM Via Task Scheduler
+schtasks /query /tn "PythonSchedulerService"
+```

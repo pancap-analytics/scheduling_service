@@ -1,0 +1,4 @@
+Script Path: \\PANCAPDC1\Shared Folders\Pan\Public\Nick\Python\Analytics_Library\ICE\CashToPrompt\ICE_CashToPrompt.py
+
+Python Interpreter: \\PANCAPDC1\Shared Folders\Pan\Public\Nick\Python\Analytics_Library\.venv\Scripts\python.exe
+WorkingDirectory: \\PANCAPDC1\Shared Folders\Pan\Public\Nick\Python\Analytics_Library\ICE\CashToPrompt\

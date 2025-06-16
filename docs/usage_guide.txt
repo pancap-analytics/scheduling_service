@@ -1,0 +1,446 @@
+# Python Analytics Scheduler - Complete User Guide
+
+## Table of Contents
+1. [Dashboard Access](#dashboard-access)
+2. [Creating and Managing Tasks](#creating-and-managing-tasks)
+3. [Scheduling Options](#scheduling-options)
+4. [Running Tasks from Network Locations](#running-tasks-from-network-locations)
+5. [Using Different Environments and Languages](#using-different-environments-and-languages)
+6. [Network Access and Remote Execution](#network-access-and-remote-execution)
+7. [Advanced Features](#advanced-features)
+8. [Troubleshooting](#troubleshooting)
+
+---
+
+## 1. Dashboard Access
+
+### Local Access
+- **URL**: http://localhost:5001
+- Access from the computer running the scheduler
+
+### Network Access
+- **URL**: http://YOUR_COMPUTER_IP:5001
+- To find your IP: `ipconfig` (look for IPv4 Address)
+- Example: http://10.0.10.125:5001
+- **Important**: Anyone with network access to your computer on port 5001 can view and control tasks
+
+### Dashboard Features
+- **Overview**: System status, active tasks, recent runs
+- **Tasks**: Create, edit, delete, and manually run tasks
+- **Monitoring**: View logs, execution history, and performance metrics
+- **Alerts**: Configure email/system notifications
+
+---
+
+## 2. Creating and Managing Tasks
+
+### Using the Dashboard (Recommended)
+1. Navigate to the "Tasks" tab
+2. Click "Create New Task"
+3. Fill in the required fields:
+   - **Task Name**: Unique identifier (e.g., "Daily_Sales_Report")
+   - **Description**: What the task does
+   - **Script Path**: Full path to your script
+   - **Schedule**: Cron expression or simple schedule
+   - **Environment**: Python interpreter path (optional)
+
+### Using the Command Line
+```batch
+cd C:\SchedulerService
+manage_tasks.bat create "Task_Name" "C:\path\to\script.py" --schedule "0 9 * * *"
+```
+
+### Task Configuration Examples
+
+#### Basic Python Script
+```json
+{
+  "name": "Daily_Report",
+  "script_path": "C:\\Scripts\\daily_report.py",
+  "schedule": "0 9 * * *",
+  "active": true
+}
+```
+
+#### Network Script with Custom Environment
+```json
+{
+  "name": "Network_Analysis",
+  "script_path": "\\\\FileServer\\Analytics\\scripts\\analysis.py",
+  "working_directory": "\\\\FileServer\\Analytics\\data",
+  "python_path": "\\\\FileServer\\Analytics\\venv\\Scripts\\python.exe",
+  "schedule": "0 */4 * * *",
+  "active": true
+}
+```
+
+---
+
+## 3. Scheduling Options
+
+### Cron Expression Format
+The scheduler uses standard cron expressions: `minute hour day month day_of_week`
+
+#### Common Examples:
+- `0 9 * * *` - Daily at 9:00 AM
+- `0 */2 * * *` - Every 2 hours
+- `30 14 * * 1-5` - Weekdays at 2:30 PM
+- `0 0 * * 0` - Weekly on Sunday at midnight
+- `0 8,12,16 * * *` - At 8 AM, 12 PM, and 4 PM daily
+- `*/15 * * * *` - Every 15 minutes
+- `0 0 1 * *` - First day of each month
+
+### Special Scheduling Options
+- **One-time execution**: Set a specific datetime
+- **Interval-based**: Run every X minutes/hours
+- **Event-based**: Trigger on file changes or system events
+
+---
+
+## 4. Running Tasks from Network Locations
+
+### Network Script Execution
+Yes, you can run scripts stored on network drives! Here's how:
+
+#### Setup Requirements:
+1. The service/scheduler must run under a user account with network access
+2. Use UNC paths, not mapped drives: `\\\\Server\\Share\\script.py`
+3. Ensure the account has read permissions on the network location
+
+#### Example Network Task:
+```python
+# Task configuration
+{
+  "name": "Shared_Analytics_Script",
+  "script_path": "\\\\CompanyServer\\Analytics\\scripts\\daily_metrics.py",
+  "working_directory": "\\\\CompanyServer\\Analytics\\data",
+  "python_path": "C:\\SchedulerService\\venv\\Scripts\\python.exe",
+  "schedule": "0 6 * * *"
+}
+```
+
+#### Using Network Virtual Environments:
+```python
+{
+  "name": "Network_Env_Task",
+  "script_path": "\\\\Server\\Projects\\project1\\scripts\\process.py",
+  "python_path": "\\\\Server\\Projects\\project1\\venv\\Scripts\\python.exe",
+  "working_directory": "\\\\Server\\Projects\\project1",
+  "schedule": "0 */3 * * *"
+}
+```
+
+### Best Practices for Network Execution:
+1. **Use absolute UNC paths** - Avoid mapped drives (Z:\) as services may not have access
+2. **Test connectivity** - Ensure the scheduler can access the network location
+3. **Handle network failures** - Add retry logic in your scripts
+4. **Consider performance** - Network scripts may run slower than local ones
+
+---
+
+## 5. Using Different Environments and Languages
+
+### Multiple Python Environments
+
+#### Local Virtual Environments:
+```python
+# Task 1: Using project-specific venv
+{
+  "name": "ML_Model_Training",
+  "script_path": "C:\\Projects\\ML\\train_model.py",
+  "python_path": "C:\\Projects\\ML\\venv\\Scripts\\python.exe",
+  "schedule": "0 2 * * *"
+}
+
+# Task 2: Using Anaconda environment
+{
+  "name": "Data_Science_Pipeline",
+  "script_path": "C:\\DataScience\\pipeline.py",
+  "python_path": "C:\\Users\\YourName\\Anaconda3\\envs\\ds_env\\python.exe",
+  "schedule": "0 4 * * *"
+}
+```
+
+### Running SQL Scripts
+
+#### Option 1: Python Script that Executes SQL
+```python
+# sql_runner.py
+import psycopg2
+import sqlalchemy
+
+def run_sql_file(filename):
+    with open(filename, 'r') as f:
+        sql = f.read()
+    
+    # Execute using your preferred method
+    conn = psycopg2.connect(...)
+    conn.execute(sql)
+```
+
+#### Option 2: Direct SQL Execution via Command
+```python
+{
+  "name": "Daily_SQL_Report",
+  "command": "sqlcmd -S server -d database -i C:\\Scripts\\daily_report.sql -o C:\\Logs\\output.txt",
+  "task_type": "command",
+  "schedule": "0 7 * * *"
+}
+```
+
+### Running Other Languages
+
+#### PowerShell Scripts:
+```python
+{
+  "name": "System_Maintenance",
+  "command": "powershell.exe -ExecutionPolicy Bypass -File C:\\Scripts\\maintenance.ps1",
+  "task_type": "command",
+  "schedule": "0 3 * * 0"
+}
+```
+
+#### R Scripts:
+```python
+{
+  "name": "Statistical_Analysis",
+  "command": "C:\\Program Files\\R\\R-4.3.0\\bin\\Rscript.exe C:\\Scripts\\analysis.R",
+  "task_type": "command",
+  "schedule": "0 10 * * *"
+}
+```
+
+#### Batch Files:
+```python
+{
+  "name": "Backup_Process",
+  "command": "C:\\Scripts\\backup.bat",
+  "task_type": "command",
+  "schedule": "0 23 * * *"
+}
+```
+
+---
+
+## 6. Network Access and Remote Execution
+
+### Remote Access Capabilities
+
+**YES**, someone on your network can access the dashboard and trigger tasks that run on your computer!
+
+#### How It Works:
+1. The scheduler runs on your computer
+2. The dashboard is accessible via network (port 5001)
+3. Anyone who can access http://YOUR_IP:5001 can:
+   - View all scheduled tasks
+   - Manually trigger task execution
+   - Create/modify/delete tasks
+   - View execution logs and results
+
+#### Security Considerations:
+
+**Current Setup (No Authentication)**:
+- Anyone on your network can fully control the scheduler
+- Tasks run with your computer's permissions
+- No audit trail of who triggered what
+
+**Recommended Security Measures**:
+
+1. **Firewall Rules**: Limit access to specific IPs
+   ```batch
+   netsh advfirewall firewall add rule name="Scheduler Dashboard" dir=in action=allow protocol=TCP localport=5001 remoteip=10.0.10.100,10.0.10.101
+   ```
+
+2. **Add Basic Authentication** (requires code modification):
+   ```python
+   # In monitoring_dashboard.py
+   from flask_httpauth import HTTPBasicAuth
+   
+   auth = HTTPBasicAuth()
+   users = {"admin": "password123"}
+   
+   @auth.verify_password
+   def verify_password(username, password):
+       return users.get(username) == password
+   
+   # Add @auth.login_required to routes
+   ```
+
+3. **Use HTTPS**: Add SSL certificates for encrypted communication
+
+4. **Network Isolation**: Run on a separate VLAN if possible
+
+### Remote Execution Scenarios
+
+#### Scenario 1: Team Collaboration
+- Data team members can trigger ETL processes
+- Reports run on your powerful workstation
+- Results saved to shared network drive
+
+#### Scenario 2: Centralized Scheduling
+- Your computer acts as a scheduling server
+- Team members schedule their own tasks
+- All tasks run under your credentials
+
+#### Example: Shared Task with Network Output
+```python
+{
+  "name": "Team_Report_Generator",
+  "script_path": "C:\\SharedScripts\\generate_report.py",
+  "output_directory": "\\\\FileServer\\Reports\\Daily",
+  "schedule": "manual",  # Only run when triggered
+  "parameters": {
+    "save_to_network": true,
+    "email_on_complete": true
+  }
+}
+```
+
+---
+
+## 7. Advanced Features
+
+### Task Dependencies
+Configure tasks to run after other tasks complete:
+```python
+{
+  "name": "Process_Data",
+  "script_path": "process.py",
+  "schedule": "0 1 * * *",
+  "dependencies": ["Extract_Data"]
+}
+```
+
+### Parameterized Tasks
+Pass arguments to scripts:
+```python
+{
+  "name": "Flexible_Report",
+  "script_path": "report.py",
+  "arguments": ["--date", "today", "--format", "excel"],
+  "schedule": "0 9 * * 1-5"
+}
+```
+
+### Environment Variables
+Set custom environment variables:
+```python
+{
+  "name": "API_Integration",
+  "script_path": "api_sync.py",
+  "environment": {
+    "API_KEY": "your_api_key",
+    "ENV": "production"
+  },
+  "schedule": "*/30 * * * *"
+}
+```
+
+### Conditional Execution
+Only run under certain conditions:
+```python
+{
+  "name": "Conditional_Task",
+  "script_path": "check_and_process.py",
+  "pre_check_script": "check_conditions.py",
+  "schedule": "0 * * * *"
+}
+```
+
+### Notifications and Alerts
+
+#### Email Notifications:
+```python
+{
+  "name": "Critical_Process",
+  "script_path": "critical.py",
+  "notifications": {
+    "on_failure": ["admin@company.com"],
+    "on_success": ["team@company.com"]
+  },
+  "schedule": "0 0 * * *"
+}
+```
+
+#### Webhook Integration:
+```python
+{
+  "name": "Webhook_Task",
+  "script_path": "process.py",
+  "webhooks": {
+    "on_start": "https://hooks.slack.com/start",
+    "on_complete": "https://hooks.slack.com/complete"
+  }
+}
+```
+
+---
+
+## 8. Troubleshooting
+
+### Common Issues and Solutions
+
+#### Task Doesn't Run
+1. Check the logs: `C:\SchedulerService\logs\`
+2. Verify script path is correct
+3. Test script manually first
+4. Check Python environment path
+
+#### Network Script Fails
+1. Verify network connectivity
+2. Check permissions for the service account
+3. Use UNC paths, not mapped drives
+4. Add error handling for network timeouts
+
+#### Performance Issues
+1. Limit concurrent task execution
+2. Stagger task schedules
+3. Monitor resource usage
+4. Use task priorities
+
+### Useful Commands
+
+```batch
+# View all tasks
+manage_tasks.bat list
+
+# Test a task without scheduling
+manage_tasks.bat test "Task_Name"
+
+# View task logs
+type C:\SchedulerService\logs\tasks\Task_Name.log
+
+# Check service status
+sc query PythonAnalyticsSchedulerLocal
+```
+
+### Log Locations
+- **Service Logs**: `C:\SchedulerService\logs\service.log`
+- **Task Logs**: `C:\SchedulerService\logs\tasks\[task_name].log`
+- **Dashboard Logs**: `C:\SchedulerService\logs\dashboard.log`
+- **Error Logs**: `C:\SchedulerService\logs\errors.log`
+
+---
+
+## Best Practices Summary
+
+1. **Test scripts manually** before scheduling
+2. **Use absolute paths** for scripts and environments
+3. **Implement error handling** in your scripts
+4. **Monitor resource usage** for heavy tasks
+5. **Secure network access** if exposing dashboard
+6. **Regular backups** of task configurations
+7. **Document task purposes** in descriptions
+8. **Use version control** for scripts
+9. **Set up notifications** for critical tasks
+10. **Review logs regularly** for issues
+
+---
+
+## Need Help?
+
+- Check logs first - they usually contain the answer
+- Test scripts outside the scheduler
+- Verify permissions and paths
+- Use the dashboard's test feature
+- Monitor system resources during execution
