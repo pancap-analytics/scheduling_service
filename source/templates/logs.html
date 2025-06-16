@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs - Python Analytics Scheduler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .nav {
+            background-color: #34495e;
+            padding: 0 2rem;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        .nav a:hover, .nav a.active {
+            background-color: #2c3e50;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .logs-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            height: calc(100vh - 200px);
+        }
+        
+        .sidebar {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow-y: auto;
+        }
+        
+        .sidebar h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .log-list {
+            list-style: none;
+        }
+        
+        .log-item {
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .log-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .log-item.active {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .log-viewer {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .log-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .log-content {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        .log-line {
+            margin-bottom: 0.25rem;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        
+        .log-timestamp {
+            color: #569cd6;
+        }
+        
+        .log-level-INFO {
+            color: #4ec9b0;
+        }
+        
+        .log-level-WARNING {
+            color: #dcdcaa;
+        }
+        
+        .log-level-ERROR {
+            color: #f44747;
+        }
+        
+        .log-level-DEBUG {
+            color: #9cdcfe;
+        }
+        
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .btn-sm {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+        }
+        
+        .filter-controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .filter-controls select {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .search-box {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .empty-state {
+            text-align: center;
+            color: #7f8c8d;
+            padding: 3rem;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .tab {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .tab:hover {
+            border-color: #3498db;
+        }
+        
+        .tab.active {
+            border-color: #3498db;
+            color: #3498db;
+        }
+        
+        .task-history {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .history-item {
+            border-left: 3px solid #3498db;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .history-success {
+            border-color: #27ae60;
+        }
+        
+        .history-failed {
+            border-color: #e74c3c;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #7f8c8d;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Python Analytics Scheduler - Logs</h1>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="/">Dashboard</a>
+        <a href="/tasks">Tasks</a>
+        <a href="/logs" class="active">Logs</a>
+        <a href="/settings">Settings</a>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('task-logs')">Task Logs</div>
+            <div class="tab" onclick="switchTab('system-logs')">System Logs</div>
+            <div class="tab" onclick="switchTab('task-history')">Task History</div>
+        </div>
+        
+        <!-- Task Logs View -->
+        <div id="task-logs" class="tab-content">
+            <div class="logs-container">
+                <!-- Sidebar with task list -->
+                <div class="sidebar">
+                    <h3>Tasks</h3>
+                    <ul class="log-list" id="taskList">
+                        <li class="loading">Loading tasks...</li>
+                    </ul>
+                </div>
+                
+                <!-- Log viewer -->
+                <div class="log-viewer">
+                    <div class="log-header">
+                        <h3 id="logTitle">Select a task to view logs</h3>
+                        <div>
+                            <button class="btn btn-sm" onclick="refreshLogs()">Refresh</button>
+                            <button class="btn btn-sm" onclick="clearLogs()">Clear</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Filter controls -->
+                    <div style="padding: 1rem; background-color: #f8f9fa;">
+                        <div class="filter-controls">
+                            <select id="logLevel" onchange="filterLogs()">
+                                <option value="">All Levels</option>
+                                <option value="INFO">INFO</option>
+                                <option value="WARNING">WARNING</option>
+                                <option value="ERROR">ERROR</option>
+                                <option value="DEBUG">DEBUG</option>
+                            </select>
+                            <input type="text" class="search-box" id="searchBox" placeholder="Search logs..." onkeyup="filterLogs()">
+                        </div>
+                    </div>
+                    
+                    <div class="log-content" id="logContent">
+                        <div class="empty-state">Select a task from the left to view its logs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- System Logs View -->
+        <div id="system-logs" class="tab-content" style="display: none;">
+            <div class="logs-container">
+                <!-- Sidebar with log types -->
+                <div class="sidebar">
+                    <h3>System Logs</h3>
+                    <ul class="log-list">
+                        <li class="log-item" onclick="loadSystemLog('service')">Service Log</li>
+                        <li class="log-item" onclick="loadSystemLog('scheduler')">Scheduler Log</li>
+                        <li class="log-item" onclick="loadSystemLog('dashboard')">Dashboard Log</li>
+                        <li class="log-item" onclick="loadSystemLog('error')">Error Log</li>
+                    </ul>
+                </div>
+                
+                <!-- System log viewer -->
+                <div class="log-viewer">
+                    <div class="log-header">
+                        <h3 id="systemLogTitle">Select a log type</h3>
+                        <button class="btn btn-sm" onclick="refreshSystemLogs()">Refresh</button>
+                    </div>
+                    <div class="log-content" id="systemLogContent">
+                        <div class="empty-state">Select a log type from the left</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Task History View -->
+        <div id="task-history" class="tab-content" style="display: none;">
+            <div class="task-history">
+                <h3>Task Execution History</h3>
+                <div class="filter-controls" style="margin-top: 1rem;">
+                    <select id="historyTask" onchange="loadTaskHistory()">
+                        <option value="">Select a task...</option>
+                    </select>
+                    <select id="historyDays">
+                        <option value="1">Last 24 hours</option>
+                        <option value="7" selected>Last 7 days</option>
+                        <option value="30">Last 30 days</option>
+                    </select>
+                </div>
+                <div id="historyContent" style="margin-top: 2rem;">
+                    <div class="empty-state">Select a task to view its execution history</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const API_BASE = window.location.origin;
+        let currentTask = null;
+        let currentLogs = [];
+        let tasks = [];
+        
+        // Load tasks on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTasks();
+        });
+        
+        async function loadTasks() {
+            try {
+                const response = await fetch(`${API_BASE}/api/tasks`);
+                const data = await response.json();
+                tasks = data.tasks || [];
+                
+                // Update task list in sidebar
+                const taskList = document.getElementById('taskList');
+                if (tasks.length === 0) {
+                    taskList.innerHTML = '<li class="empty-state">No tasks found</li>';
+                } else {
+                    taskList.innerHTML = tasks.map(task => 
+                        `<li class="log-item" onclick="selectTask('${task.name}')">${task.name}</li>`
+                    ).join('');
+                }
+                
+                // Update task dropdown in history
+                const historySelect = document.getElementById('historyTask');
+                historySelect.innerHTML = '<option value="">Select a task...</option>' + 
+                    tasks.map(task => `<option value="${task.name}">${task.name}</option>`).join('');
+                
+            } catch (error) {
+                console.error('Error loading tasks:', error);
+                document.getElementById('taskList').innerHTML = '<li class="empty-state">Error loading tasks</li>';
+            }
+        }
+        
+        async function selectTask(taskName) {
+            currentTask = taskName;
+            
+            // Update UI
+            document.querySelectorAll('.log-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.textContent === taskName) {
+                    item.classList.add('active');
+                }
+            });
+            
+            document.getElementById('logTitle').textContent = `Logs: ${taskName}`;
+            
+            // Load logs
+            await loadTaskLogs(taskName);
+        }
+        
+        async function loadTaskLogs(taskName) {
+            try {
+                document.getElementById('logContent').innerHTML = '<div class="loading">Loading logs...</div>';
+                
+                const response = await fetch(`${API_BASE}/api/logs/${taskName}`);
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    currentLogs = data.logs || [];
+                    displayLogs(currentLogs);
+                } else {
+                    document.getElementById('logContent').innerHTML = 
+                        '<div class="empty-state">No logs available for this task</div>';
+                }
+                
+            } catch (error) {
+                console.error('Error loading logs:', error);
+                document.getElementById('logContent').innerHTML = 
+                    '<div class="empty-state">Error loading logs</div>';
+            }
+        }
+        
+        function displayLogs(logs) {
+            const logContent = document.getElementById('logContent');
+            
+            if (logs.length === 0) {
+                logContent.innerHTML = '<div class="empty-state">No logs to display</div>';
+                return;
+            }
+            
+            logContent.innerHTML = logs.map(log => {
+                const levelMatch = log.message.match(/- (INFO|WARNING|ERROR|DEBUG) -/);
+                const level = levelMatch ? levelMatch[1] : 'INFO';
+                
+                return `<div class="log-line">
+                    <span class="log-timestamp">${log.timestamp}</span> 
+                    <span class="log-level-${level}">${log.message}</span>
+                </div>`;
+            }).join('');
+            
+            // Scroll to bottom
+            logContent.scrollTop = logContent.scrollHeight;
+        }
+        
+        function filterLogs() {
+            const level = document.getElementById('logLevel').value;
+            const search = document.getElementById('searchBox').value.toLowerCase();
+            
+            const filteredLogs = currentLogs.filter(log => {
+                const matchesLevel = !level || log.message.includes(`- ${level} -`);
+                const matchesSearch = !search || log.message.toLowerCase().includes(search);
+                return matchesLevel && matchesSearch;
+            });
+            
+            displayLogs(filteredLogs);
+        }
+        
+        function refreshLogs() {
+            if (currentTask) {
+                loadTaskLogs(currentTask);
+            }
+        }
+        
+        function clearLogs() {
+            if (currentTask && confirm(`Clear logs for ${currentTask}?`)) {
+                // This would typically call an API to clear logs
+                document.getElementById('logContent').innerHTML = 
+                    '<div class="empty-state">Logs cleared</div>';
+            }
+        }
+        
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).style.display = 'block';
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+        
+        async function loadSystemLog(logType) {
+            // Update active state
+            document.querySelectorAll('#system-logs .log-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.textContent.toLowerCase().includes(logType)) {
+                    item.classList.add('active');
+                }
+            });
+            
+            document.getElementById('systemLogTitle').textContent = `${logType.charAt(0).toUpperCase() + logType.slice(1)} Log`;
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/logs/system`);
+                const data = await response.json();
+                
+                const logContent = data.logs[`${logType}.log`] || [];
+                
+                document.getElementById('systemLogContent').innerHTML = logContent.length > 0
+                    ? logContent.map(line => `<div class="log-line">${line}</div>`).join('')
+                    : '<div class="empty-state">No logs available</div>';
+                    
+            } catch (error) {
+                console.error('Error loading system logs:', error);
+                document.getElementById('systemLogContent').innerHTML = 
+                    '<div class="empty-state">Error loading logs</div>';
+            }
+        }
+        
+        async function loadTaskHistory() {
+            const taskName = document.getElementById('historyTask').value;
+            if (!taskName) return;
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/task/${taskName}/history`);
+                const data = await response.json();
+                
+                const historyContent = document.getElementById('historyContent');
+                
+                if (data.history && data.history.length > 0) {
+                    historyContent.innerHTML = data.history.map(run => `
+                        <div class="history-item history-${run.status}">
+                            <strong>Run #${run.run_id}</strong>
+                            <div>Started: ${new Date(run.start_time).toLocaleString()}</div>
+                            <div>Duration: ${formatDuration(run.duration)}</div>
+                            <div>Status: ${run.status.toUpperCase()}</div>
+                            ${run.output ? `<div style="margin-top: 0.5rem; padding: 0.5rem; background-color: #f8f9fa; border-radius: 4px; font-family: monospace; font-size: 0.875rem;">${run.output}</div>` : ''}
+                        </div>
+                    `).join('');
+                } else {
+                    historyContent.innerHTML = '<div class="empty-state">No execution history available</div>';
+                }
+                
+            } catch (error) {
+                console.error('Error loading task history:', error);
+                document.getElementById('historyContent').innerHTML = 
+                    '<div class="empty-state">Error loading history</div>';
+            }
+        }
+        
+        function formatDuration(seconds) {
+            if (seconds < 60) return `${seconds} seconds`;
+            if (seconds < 3600) return `${Math.floor(seconds / 60)} minutes`;
+            return `${Math.floor(seconds / 3600)} hours`;
+        }
+        
+        function refreshSystemLogs() {
+            const activeLog = document.querySelector('#system-logs .log-item.active');
+            if (activeLog) {
+                const logType = activeLog.textContent.toLowerCase().split(' ')[0];
+                loadSystemLog(logType);
+            }
+        }
+    </script>
+</body>
+</html>

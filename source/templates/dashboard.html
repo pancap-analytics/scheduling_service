@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Python Analytics Scheduler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .nav {
+            background-color: #34495e;
+            padding: 0 2rem;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        .nav a:hover, .nav a.active {
+            background-color: #2c3e50;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        
+        .status-online {
+            background-color: #27ae60;
+        }
+        
+        .status-offline {
+            background-color: #e74c3c;
+        }
+        
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .metric-value {
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+        
+        .tasks-summary {
+            margin-top: 2rem;
+        }
+        
+        .task-item {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .task-status {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+        }
+        
+        .status-running {
+            background-color: #fef9e7;
+            color: #7d6608;
+        }
+        
+        .status-scheduled {
+            background-color: #d1f2eb;
+            color: #0e6251;
+        }
+        
+        .status-completed {
+            background-color: #eaeded;
+            color: #566573;
+        }
+        
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .recent-runs {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .run-item {
+            border-left: 3px solid #3498db;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .run-success {
+            border-color: #27ae60;
+        }
+        
+        .run-failed {
+            border-color: #e74c3c;
+        }
+        
+        .timestamp {
+            color: #7f8c8d;
+            font-size: 0.875rem;
+        }
+        
+        .error-message {
+            background-color: #fadbd8;
+            color: #922b21;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Python Analytics Scheduler - Dashboard</h1>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="/" class="active">Dashboard</a>
+        <a href="/tasks">Tasks</a>
+        <a href="/logs">Logs</a>
+        <a href="/settings">Settings</a>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- System Status Cards -->
+        <div class="grid">
+            <!-- Scheduler Status -->
+            <div class="card">
+                <h3>Scheduler Status</h3>
+                <div id="schedulerStatus">
+                    <div class="loading">Loading...</div>
+                </div>
+            </div>
+            
+            <!-- System Resources -->
+            <div class="card">
+                <h3>System Resources</h3>
+                <div id="systemResources">
+                    <div class="loading">Loading...</div>
+                </div>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="card">
+                <h3>Quick Stats</h3>
+                <div id="quickStats">
+                    <div class="loading">Loading...</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Active Tasks -->
+        <div class="card">
+            <h3>Active Tasks</h3>
+            <div id="activeTasks">
+                <div class="loading">Loading tasks...</div>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="/tasks" class="btn">Manage Tasks</a>
+            </div>
+        </div>
+        
+        <!-- Recent Runs -->
+        <div class="card" style="margin-top: 1.5rem;">
+            <h3>Recent Task Runs</h3>
+            <div class="recent-runs" id="recentRuns">
+                <div class="loading">Loading recent runs...</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const API_BASE = window.location.origin;
+        
+        // Auto-refresh every 10 seconds
+        function startAutoRefresh() {
+            updateDashboard();
+            setInterval(updateDashboard, 10000);
+        }
+        
+        async function updateDashboard() {
+            await Promise.all([
+                updateSystemStatus(),
+                updateTasks(),
+                updateRecentRuns()
+            ]);
+        }
+        
+        async function updateSystemStatus() {
+            try {
+                const response = await fetch(`${API_BASE}/api/status`);
+                const data = await response.json();
+                
+                // Update scheduler status
+                const schedulerDiv = document.getElementById('schedulerStatus');
+                schedulerDiv.innerHTML = `
+                    <div class="metric">
+                        <span>Status</span>
+                        <span>
+                            <span class="status-indicator ${data.scheduler.status === 'Running' ? 'status-online' : 'status-offline'}"></span>
+                            ${data.scheduler.status}
+                        </span>
+                    </div>
+                    <div class="metric">
+                        <span>Uptime</span>
+                        <span class="metric-value">${data.scheduler.uptime}</span>
+                    </div>
+                `;
+                
+                // Update system resources
+                const resourcesDiv = document.getElementById('systemResources');
+                resourcesDiv.innerHTML = `
+                    <div class="metric">
+                        <span>CPU Usage</span>
+                        <span class="metric-value">${data.system.cpu_percent.toFixed(1)}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${data.system.cpu_percent}%"></div>
+                    </div>
+                    
+                    <div class="metric" style="margin-top: 1rem;">
+                        <span>Memory Usage</span>
+                        <span class="metric-value">${data.system.memory_percent.toFixed(1)}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${data.system.memory_percent}%"></div>
+                    </div>
+                    
+                    <div class="metric" style="margin-top: 1rem;">
+                        <span>Disk Usage</span>
+                        <span class="metric-value">${data.system.disk_percent.toFixed(1)}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${data.system.disk_percent}%"></div>
+                    </div>
+                `;
+                
+            } catch (error) {
+                console.error('Error updating system status:', error);
+            }
+        }
+        
+        async function updateTasks() {
+            try {
+                const response = await fetch(`${API_BASE}/api/tasks`);
+                const data = await response.json();
+                
+                const tasks = data.tasks || [];
+                const activeTasks = tasks.filter(t => t.active);
+                const runningTasks = tasks.filter(t => t.is_running);
+                
+                // Update quick stats
+                document.getElementById('quickStats').innerHTML = `
+                    <div class="metric">
+                        <span>Total Tasks</span>
+                        <span class="metric-value">${tasks.length}</span>
+                    </div>
+                    <div class="metric">
+                        <span>Active Tasks</span>
+                        <span class="metric-value">${activeTasks.length}</span>
+                    </div>
+                    <div class="metric">
+                        <span>Running Now</span>
+                        <span class="metric-value">${runningTasks.length}</span>
+                    </div>
+                `;
+                
+                // Update active tasks list
+                const tasksDiv = document.getElementById('activeTasks');
+                if (activeTasks.length === 0) {
+                    tasksDiv.innerHTML = '<p style="color: #7f8c8d;">No active tasks</p>';
+                } else {
+                    tasksDiv.innerHTML = activeTasks.slice(0, 5).map(task => `
+                        <div class="task-item">
+                            <div>
+                                <strong>${task.name}</strong>
+                                <div class="timestamp">Next run: ${formatDateTime(task.next_run)}</div>
+                            </div>
+                            <span class="task-status ${task.is_running ? 'status-running' : 'status-scheduled'}">
+                                ${task.is_running ? 'Running' : 'Scheduled'}
+                            </span>
+                        </div>
+                    `).join('');
+                }
+                
+            } catch (error) {
+                console.error('Error updating tasks:', error);
+                document.getElementById('quickStats').innerHTML = '<div class="error-message">Error loading tasks</div>';
+            }
+        }
+        
+        async function updateRecentRuns() {
+            // This would typically fetch from an API endpoint
+            // For now, show placeholder
+            const runsDiv = document.getElementById('recentRuns');
+            runsDiv.innerHTML = `
+                <div class="run-item run-success">
+                    <strong>Daily_Report</strong>
+                    <div class="timestamp">Completed 10 minutes ago</div>
+                    <div>Duration: 45 seconds</div>
+                </div>
+                <div class="run-item run-success">
+                    <strong>Data_Sync</strong>
+                    <div class="timestamp">Completed 1 hour ago</div>
+                    <div>Duration: 2 minutes</div>
+                </div>
+                <div class="run-item run-failed">
+                    <strong>Weekly_Analysis</strong>
+                    <div class="timestamp">Failed 3 hours ago</div>
+                    <div>Error: File not found</div>
+                </div>
+            `;
+        }
+        
+        function formatDateTime(datetime) {
+            if (!datetime) return 'Not scheduled';
+            const date = new Date(datetime);
+            if (isNaN(date)) return 'Invalid date';
+            
+            const now = new Date();
+            const diffMs = date - now;
+            const diffMins = Math.floor(diffMs / 60000);
+            
+            if (diffMs > 0 && diffMs < 86400000) {
+                if (diffMins < 60) return `In ${diffMins} minutes`;
+                const diffHours = Math.floor(diffMins / 60);
+                return `In ${diffHours} hour${diffHours > 1 ? 's' : ''}`;
+            }
+            
+            return date.toLocaleString();
+        }
+        
+        // Start auto-refresh when page loads
+        document.addEventListener('DOMContentLoaded', startAutoRefresh);
+    </script>
+</body>
+</html>

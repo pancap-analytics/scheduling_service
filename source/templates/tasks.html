@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Python Analytics Scheduler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .nav {
+            background-color: #34495e;
+            padding: 0 2rem;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        .nav a:hover, .nav a.active {
+            background-color: #2c3e50;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .actions {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .btn-success {
+            background-color: #27ae60;
+        }
+        
+        .btn-success:hover {
+            background-color: #229954;
+        }
+        
+        .btn-danger {
+            background-color: #e74c3c;
+        }
+        
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+        
+        .btn-warning {
+            background-color: #f39c12;
+        }
+        
+        .btn-warning:hover {
+            background-color: #d68910;
+        }
+        
+        .tasks-table {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background-color: #34495e;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 500;
+        }
+        
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .status {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .status-active {
+            background-color: #d1f2eb;
+            color: #0e6251;
+        }
+        
+        .status-inactive {
+            background-color: #fadbd8;
+            color: #922b21;
+        }
+        
+        .status-running {
+            background-color: #fef9e7;
+            color: #7d6608;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 2rem auto;
+            padding: 2rem;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .close {
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .close:hover {
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .schedule-type {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .schedule-type label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .schedule-type input[type="radio"] {
+            margin-right: 0.5rem;
+            width: auto;
+        }
+        
+        .schedule-options {
+            display: none;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+        
+        .schedule-options.active {
+            display: block;
+        }
+        
+        .time-inputs {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .time-inputs input {
+            width: 80px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .action-buttons button {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+        
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        
+        .error-box {
+            background-color: #fadbd8;
+            border-left: 4px solid #e74c3c;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+        
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .metric-value {
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Python Analytics Scheduler - Task Manager</h1>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="/">Dashboard</a>
+        <a href="/tasks" class="active">Tasks</a>
+        <a href="/logs">Logs</a>
+        <a href="/settings">Settings</a>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Actions Bar -->
+        <div class="actions">
+            <h2>Scheduled Tasks</h2>
+            <button class="btn btn-success" onclick="showAddTaskModal()">+ Add New Task</button>
+        </div>
+        
+        <!-- Tasks Table -->
+        <div class="tasks-table">
+            <table id="tasksTable">
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Status</th>
+                        <th>Schedule</th>
+                        <th>Last Run</th>
+                        <th>Next Run</th>
+                        <th>Resources</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tasksBody">
+                    <tr>
+                        <td colspan="7" class="loading">Loading tasks...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Add/Edit Task Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add New Task</h2>
+                <span class="close" onclick="hideTaskModal()">&times;</span>
+            </div>
+            
+            <form id="taskForm">
+                <input type="hidden" id="taskId">
+                
+                <div class="form-group">
+                    <label for="taskName">Task Name *</label>
+                    <input type="text" id="taskName" required placeholder="e.g., Daily_Sales_Report">
+                </div>
+                
+                <div class="form-group">
+                    <label for="scriptPath">Script Path *</label>
+                    <input type="text" id="scriptPath" required placeholder="C:\Scripts\my_script.py or \\server\share\script.py">
+                    <small style="color: #666;">Full path to your Python script (local or network path)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pythonPath">Python Interpreter (Optional)</label>
+                    <input type="text" id="pythonPath" placeholder="Leave empty to use default or specify custom path">
+                    <small style="color: #666;">e.g., C:\Python39\python.exe or \\server\venv\Scripts\python.exe</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="workingDirectory">Working Directory (Optional)</label>
+                    <input type="text" id="workingDirectory" placeholder="Directory to run the script from">
+                </div>
+                
+                <div class="form-group">
+                    <label for="arguments">Script Arguments (Optional)</label>
+                    <input type="text" id="arguments" placeholder="--input data.csv --output results.xlsx">
+                </div>
+                
+                <div class="form-group">
+                    <label>Schedule Type</label>
+                    <div class="schedule-type">
+                        <label>
+                            <input type="radio" name="scheduleType" value="once" onchange="showScheduleOptions('once')">
+                            One Time
+                        </label>
+                        <label>
+                            <input type="radio" name="scheduleType" value="daily" onchange="showScheduleOptions('daily')" checked>
+                            Daily
+                        </label>
+                        <label>
+                            <input type="radio" name="scheduleType" value="weekly" onchange="showScheduleOptions('weekly')">
+                            Weekly
+                        </label>
+                        <label>
+                            <input type="radio" name="scheduleType" value="monthly" onchange="showScheduleOptions('monthly')">
+                            Monthly
+                        </label>
+                        <label>
+                            <input type="radio" name="scheduleType" value="interval" onchange="showScheduleOptions('interval')">
+                            Interval
+                        </label>
+                        <label>
+                            <input type="radio" name="scheduleType" value="cron" onchange="showScheduleOptions('cron')">
+                            Advanced (Cron)
+                        </label>
+                    </div>
+                    
+                    <!-- Schedule Options -->
+                    <div id="scheduleOnce" class="schedule-options">
+                        <div class="form-group">
+                            <label>Run Date & Time</label>
+                            <input type="datetime-local" id="onceDateTime">
+                        </div>
+                    </div>
+                    
+                    <div id="scheduleDaily" class="schedule-options active">
+                        <div class="form-group">
+                            <label>Run Time</label>
+                            <div class="time-inputs">
+                                <input type="time" id="dailyTime" value="09:00">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="scheduleWeekly" class="schedule-options">
+                        <div class="form-group">
+                            <label>Days of Week</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="weekday" value="0"> Sunday</label>
+                                <label><input type="checkbox" name="weekday" value="1" checked> Monday</label>
+                                <label><input type="checkbox" name="weekday" value="2"> Tuesday</label>
+                                <label><input type="checkbox" name="weekday" value="3"> Wednesday</label>
+                                <label><input type="checkbox" name="weekday" value="4"> Thursday</label>
+                                <label><input type="checkbox" name="weekday" value="5"> Friday</label>
+                                <label><input type="checkbox" name="weekday" value="6"> Saturday</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Run Time</label>
+                            <input type="time" id="weeklyTime" value="09:00">
+                        </div>
+                    </div>
+                    
+                    <div id="scheduleMonthly" class="schedule-options">
+                        <div class="form-group">
+                            <label>Day of Month (1-31)</label>
+                            <input type="number" id="monthlyDay" min="1" max="31" value="1">
+                        </div>
+                        <div class="form-group">
+                            <label>Run Time</label>
+                            <input type="time" id="monthlyTime" value="09:00">
+                        </div>
+                    </div>
+                    
+                    <div id="scheduleInterval" class="schedule-options">
+                        <div class="form-group">
+                            <label>Run Every</label>
+                            <div style="display: flex; gap: 1rem;">
+                                <input type="number" id="intervalValue" min="1" value="1" style="width: 100px;">
+                                <select id="intervalUnit">
+                                    <option value="minutes">Minutes</option>
+                                    <option value="hours" selected>Hours</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="scheduleCron" class="schedule-options">
+                        <div class="form-group">
+                            <label>Cron Expression</label>
+                            <input type="text" id="cronExpression" placeholder="0 9 * * *">
+                            <small style="color: #666;">Format: minute hour day month day_of_week</small>
+                        </div>
+                        <div class="info-box">
+                            <strong>Examples:</strong><br>
+                            <code>0 9 * * *</code> - Daily at 9:00 AM<br>
+                            <code>0 */2 * * *</code> - Every 2 hours<br>
+                            <code>30 14 * * 1-5</code> - Weekdays at 2:30 PM<br>
+                            <code>0 0 1 * *</code> - First day of month at midnight
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dependencies">Task Dependencies (Optional)</label>
+                    <select id="dependencies" multiple style="height: 100px;">
+                        <!-- Will be populated with available tasks -->
+                    </select>
+                    <small style="color: #666;">Hold Ctrl to select multiple tasks that must complete before this task runs</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description (Optional)</label>
+                    <textarea id="description" placeholder="What does this task do?"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="taskActive" checked>
+                        Task is active
+                    </label>
+                </div>
+                
+                <div class="form-group" style="display: flex; gap: 1rem; justify-content: flex-end;">
+                    <button type="button" class="btn" onclick="hideTaskModal()">Cancel</button>
+                    <button type="submit" class="btn btn-success">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Task Details Modal -->
+    <div id="taskDetailsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="detailsModalTitle">Task Details</h2>
+                <span class="close" onclick="hideDetailsModal()">&times;</span>
+            </div>
+            
+            <div id="taskDetailsContent">
+                <!-- Task info will be loaded here -->
+            </div>
+            
+            <!-- Tabs for output/history -->
+            <div style="margin-top: 2rem; border-top: 1px solid #eee; padding-top: 1rem;">
+                <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                    <button class="btn" onclick="showDetailsTab('output')" id="outputTab">Last Output</button>
+                    <button class="btn" onclick="showDetailsTab('history')" id="historyTab">Execution History</button>
+                    <button class="btn" onclick="showDetailsTab('logs')" id="logsTab">Logs</button>
+                    <button class="btn" onclick="showDetailsTab('resources')" id="resourcesTab">Resources</button>
+                </div>
+                
+                <div id="detailsTabContent" style="max-height: 400px; overflow-y: auto;">
+                    <!-- Tab content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let tasks = [];
+        const API_BASE = window.location.origin;
+        
+        // Load tasks on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTasks();
+            setInterval(loadTasks, 30000); // Refresh every 30 seconds
+        });
+        
+        async function loadTasks() {
+            try {
+                const response = await fetch(`${API_BASE}/api/tasks`);
+                const data = await response.json();
+                tasks = data.tasks || [];
+                renderTasks();
+            } catch (error) {
+                console.error('Error loading tasks:', error);
+                document.getElementById('tasksBody').innerHTML = 
+                    '<tr><td colspan="7" class="error-box">Error loading tasks. Please refresh the page.</td></tr>';
+            }
+        }
+        
+        function renderTasks() {
+            const tbody = document.getElementById('tasksBody');
+            
+            if (tasks.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem;">No tasks scheduled. Click "Add New Task" to create one.</td></tr>';
+                return;
+            }
+            
+            tbody.innerHTML = tasks.map(task => `
+                <tr>
+                    <td>
+                        <strong>${task.name}</strong>
+                        ${task.dependencies && task.dependencies.length > 0 ? 
+                            `<div style="font-size: 0.75rem; color: #666;">Depends on: ${task.dependencies.join(', ')}</div>` : 
+                            ''}
+                    </td>
+                    <td>
+                        <span class="status ${task.active ? (task.is_running ? 'status-running' : 'status-active') : 'status-inactive'}">
+                            ${task.is_running ? 'Running' : (task.active ? 'Active' : 'Inactive')}
+                        </span>
+                    </td>
+                    <td>${formatSchedule(task.schedule)}</td>
+                    <td>${formatDateTime(task.last_run)}</td>
+                    <td>${formatDateTime(task.next_run)}</td>
+                    <td>
+                        ${task.is_running && task.process_info ? 
+                            `<div style="font-size: 0.875rem;">
+                                CPU: ${task.process_info.cpu_percent.toFixed(1)}%<br>
+                                RAM: ${task.process_info.memory_mb.toFixed(1)} MB<br>
+                                Time: ${formatDuration(task.process_info.runtime)}
+                            </div>` : 
+                            `<code style="font-size: 0.75rem;">${task.script_path.split('\\').pop()}</code>`
+                        }
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-warning" onclick="runTask('${task.name}')" ${task.is_running ? 'disabled' : ''}>
+                                ${task.is_running ? 'Running...' : 'Run Now'}
+                            </button>
+                            <button class="btn" onclick="viewTaskDetails('${task.name}')">View</button>
+                            <button class="btn" onclick="editTask('${task.name}')">Edit</button>
+                            <button class="btn btn-danger" onclick="deleteTask('${task.name}')">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+            
+            // Update dependencies dropdown
+            updateDependenciesDropdown();
+        }
+        
+        function updateDependenciesDropdown() {
+            const select = document.getElementById('dependencies');
+            const currentTask = document.getElementById('taskId').value;
+            
+            select.innerHTML = tasks
+                .filter(t => t.name !== currentTask) // Don't show current task
+                .map(t => `<option value="${t.name}">${t.name}</option>`)
+                .join('');
+        }
+        
+        function formatSchedule(schedule) {
+            if (!schedule) return 'Not scheduled';
+            
+            // Try to parse common cron patterns
+            const patterns = {
+                '0 * * * *': 'Every hour',
+                '*/15 * * * *': 'Every 15 minutes',
+                '*/30 * * * *': 'Every 30 minutes',
+                '0 */2 * * *': 'Every 2 hours',
+                '0 */4 * * *': 'Every 4 hours',
+                '0 0 * * *': 'Daily at midnight',
+                '0 0 * * 0': 'Weekly on Sunday',
+                '0 0 1 * *': 'Monthly on 1st'
+            };
+            
+            if (patterns[schedule]) return patterns[schedule];
+            
+            // Check for daily pattern (0 HH * * *)
+            const dailyMatch = schedule.match(/^(\d+) (\d+) \* \* \*$/);
+            if (dailyMatch) {
+                const hour = parseInt(dailyMatch[2]);
+                const minute = parseInt(dailyMatch[1]);
+                return `Daily at ${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+            }
+            
+            return `Cron: ${schedule}`;
+        }
+        
+        function formatDateTime(datetime) {
+            if (!datetime) return 'Never';
+            const date = new Date(datetime);
+            if (isNaN(date)) return 'Never';
+            
+            const now = new Date();
+            const diffMs = date - now;
+            const diffMins = Math.floor(diffMs / 60000);
+            
+            // For next run, show relative time if within 24 hours
+            if (diffMs > 0 && diffMs < 86400000) {
+                if (diffMins < 60) return `In ${diffMins} minutes`;
+                const diffHours = Math.floor(diffMins / 60);
+                return `In ${diffHours} hour${diffHours > 1 ? 's' : ''}`;
+            }
+            
+            return date.toLocaleString();
+        }
+        
+        function showAddTaskModal() {
+            document.getElementById('modalTitle').textContent = 'Add New Task';
+            document.getElementById('taskForm').reset();
+            document.getElementById('taskId').value = '';
+            document.getElementById('taskActive').checked = true;
+            showScheduleOptions('daily');
+            document.getElementById('taskModal').style.display = 'block';
+        }
+        
+        function hideTaskModal() {
+            document.getElementById('taskModal').style.display = 'none';
+        }
+        
+        function showScheduleOptions(type) {
+            // Hide all schedule options
+            document.querySelectorAll('.schedule-options').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Show selected option
+            const selectedOption = document.getElementById('schedule' + type.charAt(0).toUpperCase() + type.slice(1));
+            if (selectedOption) {
+                selectedOption.classList.add('active');
+            }
+        }
+        
+        async function runTask(taskName) {
+            if (!confirm(`Run task "${taskName}" now?`)) return;
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/tasks/${taskName}/run`, {
+                    method: 'POST'
+                });
+                
+                const result = await response.json();
+                if (result.status === 'success') {
+                    alert(`Task "${taskName}" started successfully!`);
+                    loadTasks(); // Refresh the list
+                } else {
+                    alert(`Error: ${result.message || 'Failed to run task'}`);
+                }
+            } catch (error) {
+                alert(`Error running task: ${error.message}`);
+            }
+        }
+        
+        async function editTask(taskName) {
+            const task = tasks.find(t => t.name === taskName);
+            if (!task) return;
+            
+            document.getElementById('modalTitle').textContent = 'Edit Task';
+            document.getElementById('taskId').value = task.name;
+            document.getElementById('taskName').value = task.name;
+            document.getElementById('scriptPath').value = task.script_path || '';
+            document.getElementById('pythonPath').value = task.python_path || '';
+            document.getElementById('workingDirectory').value = task.working_directory || '';
+            document.getElementById('arguments').value = task.arguments || '';
+            document.getElementById('description').value = task.description || '';
+            document.getElementById('taskActive').checked = task.active;
+            
+            // Set dependencies
+            updateDependenciesDropdown();
+            if (task.dependencies) {
+                const select = document.getElementById('dependencies');
+                for (let option of select.options) {
+                    option.selected = task.dependencies.includes(option.value);
+                }
+            }
+            
+            // Parse and set schedule
+            if (task.schedule) {
+                document.getElementById('cronExpression').value = task.schedule;
+                document.querySelector('input[name="scheduleType"][value="cron"]').checked = true;
+                showScheduleOptions('cron');
+            }
+            
+            document.getElementById('taskModal').style.display = 'block';
+        }
+        
+        async function deleteTask(taskName) {
+            if (!confirm(`Are you sure you want to delete task "${taskName}"?`)) return;
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/tasks/${taskName}`, {
+                    method: 'DELETE'
+                });
+                
+                const result = await response.json();
+                if (result.status === 'success') {
+                    alert(`Task "${taskName}" deleted successfully!`);
+                    loadTasks();
+                } else {
+                    alert(`Error: ${result.message || 'Failed to delete task'}`);
+                }
+            } catch (error) {
+                alert(`Error deleting task: ${error.message}`);
+            }
+        }
+        
+        // Form submission
+        document.getElementById('taskForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get selected dependencies
+            const dependenciesSelect = document.getElementById('dependencies');
+            const selectedDependencies = Array.from(dependenciesSelect.selectedOptions)
+                .map(option => option.value);
+            
+            const taskData = {
+                name: document.getElementById('taskName').value,
+                script_path: document.getElementById('scriptPath').value,
+                python_path: document.getElementById('pythonPath').value || undefined,
+                working_directory: document.getElementById('workingDirectory').value || undefined,
+                arguments: document.getElementById('arguments').value || undefined,
+                description: document.getElementById('description').value || undefined,
+                active: document.getElementById('taskActive').checked,
+                dependencies: selectedDependencies
+            };
+            
+            // Build schedule based on selected type
+            const scheduleType = document.querySelector('input[name="scheduleType"]:checked').value;
+            taskData.schedule = buildSchedule(scheduleType);
+            
+            try {
+                const isEdit = document.getElementById('taskId').value;
+                const url = isEdit 
+                    ? `${API_BASE}/api/tasks/${isEdit}` 
+                    : `${API_BASE}/api/tasks`;
+                const method = isEdit ? 'PUT' : 'POST';
+                
+                const response = await fetch(url, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(taskData)
+                });
+                
+                const result = await response.json();
+                if (result.status === 'success') {
+                    alert(`Task ${isEdit ? 'updated' : 'created'} successfully!`);
+                    hideTaskModal();
+                    loadTasks();
+                } else {
+                    alert(`Error: ${result.message || 'Failed to save task'}`);
+                }
+            } catch (error) {
+                alert(`Error saving task: ${error.message}`);
+            }
+        });
+        
+        function buildSchedule(type) {
+            switch(type) {
+                case 'once':
+                    // For one-time execution, return the datetime
+                    const onceDate = document.getElementById('onceDateTime').value;
+                    return onceDate ? new Date(onceDate).toISOString() : '';
+                    
+                case 'daily':
+                    const dailyTime = document.getElementById('dailyTime').value;
+                    const [hour, minute] = dailyTime.split(':');
+                    return `${minute} ${hour} * * *`;
+                    
+                case 'weekly':
+                    const weeklyTime = document.getElementById('weeklyTime').value;
+                    const [wHour, wMinute] = weeklyTime.split(':');
+                    const selectedDays = Array.from(document.querySelectorAll('input[name="weekday"]:checked'))
+                        .map(cb => cb.value)
+                        .join(',');
+                    return `${wMinute} ${wHour} * * ${selectedDays || '*'}`;
+                    
+                case 'monthly':
+                    const monthlyDay = document.getElementById('monthlyDay').value;
+                    const monthlyTime = document.getElementById('monthlyTime').value;
+                    const [mHour, mMinute] = monthlyTime.split(':');
+                    return `${mMinute} ${mHour} ${monthlyDay} * *`;
+                    
+                case 'interval':
+                    const value = document.getElementById('intervalValue').value;
+                    const unit = document.getElementById('intervalUnit').value;
+                    if (unit === 'minutes') {
+                        return `*/${value} * * * *`;
+                    } else {
+                        return `0 */${value} * * *`;
+                    }
+                    
+                case 'cron':
+                    return document.getElementById('cronExpression').value;
+                    
+                default:
+                    return '0 9 * * *'; // Default to 9 AM daily
+            }
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('taskModal')) {
+                hideTaskModal();
+            }
+            if (event.target == document.getElementById('taskDetailsModal')) {
+                hideDetailsModal();
+            }
+        }
+        
+        // Task Details Modal Functions
+        async function viewTaskDetails(taskName) {
+            const task = tasks.find(t => t.name === taskName);
+            if (!task) return;
+            
+            document.getElementById('detailsModalTitle').textContent = `Task Details: ${taskName}`;
+            
+            // Display task information
+            const detailsContent = document.getElementById('taskDetailsContent');
+            detailsContent.innerHTML = `
+                <div class="info-box">
+                    <strong>Task Name:</strong> ${task.name}<br>
+                    <strong>Status:</strong> ${task.active ? 'Active' : 'Inactive'}<br>
+                    <strong>Script Path:</strong> <code>${task.script_path}</code><br>
+                    <strong>Schedule:</strong> ${formatSchedule(task.schedule)}<br>
+                    <strong>Last Run:</strong> ${formatDateTime(task.last_run)}<br>
+                    <strong>Next Run:</strong> ${formatDateTime(task.next_run)}<br>
+                    ${task.python_path ? `<strong>Python Path:</strong> <code>${task.python_path}</code><br>` : ''}
+                    ${task.working_directory ? `<strong>Working Directory:</strong> <code>${task.working_directory}</code><br>` : ''}
+                    ${task.arguments ? `<strong>Arguments:</strong> <code>${task.arguments}</code><br>` : ''}
+                </div>
+            `;
+            
+            // Show modal and load default tab
+            document.getElementById('taskDetailsModal').style.display = 'block';
+            showDetailsTab('output', taskName);
+        }
+        
+        function hideDetailsModal() {
+            document.getElementById('taskDetailsModal').style.display = 'none';
+            // Clear resource refresh interval if active
+            if (window.resourceRefreshInterval) {
+                clearInterval(window.resourceRefreshInterval);
+                window.resourceRefreshInterval = null;
+            }
+        }
+        
+        async function showDetailsTab(tabName, taskName) {
+            // Update active tab styling
+            document.querySelectorAll('#taskDetailsModal .btn').forEach(btn => {
+                btn.style.backgroundColor = '#3498db';
+            });
+            document.getElementById(tabName + 'Tab').style.backgroundColor = '#2980b9';
+            
+            const content = document.getElementById('detailsTabContent');
+            
+            // Get task name from modal title if not provided
+            if (!taskName) {
+                const title = document.getElementById('detailsModalTitle').textContent;
+                taskName = title.replace('Task Details: ', '');
+            }
+            
+            switch(tabName) {
+                case 'output':
+                    await loadTaskOutput(taskName);
+                    break;
+                case 'history':
+                    await loadTaskHistory(taskName);
+                    break;
+                case 'logs':
+                    await loadTaskLogs(taskName);
+                    break;
+                case 'resources':
+                    await loadTaskResources(taskName);
+                    break;
+            }
+        }
+        
+        async function loadTaskOutput(taskName) {
+            const content = document.getElementById('detailsTabContent');
+            content.innerHTML = '<div class="loading">Loading last output...</div>';
+            
+            try {
+                // In a real implementation, this would fetch the last output
+                // For now, show a sample
+                content.innerHTML = `
+                    <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 4px; font-family: monospace; white-space: pre-wrap;">
+Task started at: 2025-06-16 10:30:00
+Processing data files...
+Found 1,234 records to process
+Processing: 100%
+Generated report: daily_report_20250616.xlsx
+Task completed successfully
+Execution time: 45.3 seconds
+                    </div>
+                `;
+            } catch (error) {
+                content.innerHTML = '<div class="error-box">Error loading output</div>';
+            }
+        }
+        
+        async function loadTaskHistory(taskName) {
+            const content = document.getElementById('detailsTabContent');
+            content.innerHTML = '<div class="loading">Loading execution history...</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/task/${taskName}/history`);
+                const data = await response.json();
+                
+                if (data.history && data.history.length > 0) {
+                    content.innerHTML = data.history.map(run => `
+                        <div style="border-left: 3px solid ${run.status === 'success' ? '#27ae60' : '#e74c3c'}; padding-left: 1rem; margin-bottom: 1rem;">
+                            <strong>Run #${run.run_id}</strong>
+                            <div style="color: #666; font-size: 0.875rem;">
+                                Started: ${new Date(run.start_time).toLocaleString()}<br>
+                                Duration: ${formatDuration(run.duration)}<br>
+                                Status: <strong>${run.status.toUpperCase()}</strong>
+                            </div>
+                            ${run.output ? `<div style="margin-top: 0.5rem; padding: 0.5rem; background-color: #f8f9fa; border-radius: 4px; font-family: monospace; font-size: 0.875rem; max-height: 100px; overflow-y: auto;">${run.output}</div>` : ''}
+                        </div>
+                    `).join('');
+                } else {
+                    content.innerHTML = '<div style="text-align: center; color: #666; padding: 2rem;">No execution history available</div>';
+                }
+            } catch (error) {
+                content.innerHTML = '<div class="error-box">Error loading history</div>';
+            }
+        }
+        
+        async function loadTaskLogs(taskName) {
+            const content = document.getElementById('detailsTabContent');
+            content.innerHTML = '<div class="loading">Loading logs...</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/logs/${taskName}`);
+                const data = await response.json();
+                
+                if (data.logs && data.logs.length > 0) {
+                    content.innerHTML = `
+                        <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 4px; font-family: monospace; font-size: 0.875rem; max-height: 400px; overflow-y: auto;">
+                            ${data.logs.map(log => `<div style="margin-bottom: 0.25rem;"><span style="color: #569cd6;">${log.timestamp}</span> ${log.message}</div>`).join('')}
+                        </div>
+                    `;
+                } else {
+                    content.innerHTML = '<div style="text-align: center; color: #666; padding: 2rem;">No logs available</div>';
+                }
+            } catch (error) {
+                content.innerHTML = '<div class="error-box">Error loading logs</div>';
+            }
+        }
+        
+        function formatDuration(seconds) {
+            if (!seconds) return 'N/A';
+            if (seconds < 60) return `${seconds}s`;
+            if (seconds < 3600) return `${Math.floor(seconds / 60)}m ${seconds % 60}s`;
+            return `${Math.floor(seconds / 3600)}h ${Math.floor((seconds % 3600) / 60)}m`;
+        }
+        
+        async function loadTaskResources(taskName) {
+            const content = document.getElementById('detailsTabContent');
+            
+            const task = tasks.find(t => t.name === taskName);
+            if (!task || !task.is_running) {
+                content.innerHTML = '<div style="text-align: center; color: #666; padding: 2rem;">Task is not currently running</div>';
+                return;
+            }
+            
+            content.innerHTML = '<div class="loading">Loading resource usage...</div>';
+            
+            // Set up auto-refresh for resources
+            const refreshResources = async () => {
+                try {
+                    const response = await fetch(`${API_BASE}/api/tasks/${taskName}/resources`);
+                    const data = await response.json();
+                    
+                    if (data.status === 'success') {
+                        const res = data.resources;
+                        content.innerHTML = `
+                            <div style="padding: 1rem;">
+                                <h4>Real-time Resource Usage</h4>
+                                <div class="metric" style="margin-top: 1rem;">
+                                    <span>Process ID</span>
+                                    <span class="metric-value">${data.pid}</span>
+                                </div>
+                                <div class="metric">
+                                    <span>Status</span>
+                                    <span class="metric-value">${res.status}</span>
+                                </div>
+                                <div class="metric">
+                                    <span>Runtime</span>
+                                    <span class="metric-value">${formatDuration(Math.floor(res.runtime_seconds))}</span>
+                                </div>
+                                
+                                <h5 style="margin-top: 1.5rem;">CPU Usage</h5>
+                                <div class="metric">
+                                    <span>Current Usage</span>
+                                    <span class="metric-value">${res.cpu_percent.toFixed(1)}%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: ${Math.min(res.cpu_percent, 100)}%"></div>
+                                </div>
+                                <div class="metric" style="margin-top: 0.5rem;">
+                                    <span>CPU Time (User/System)</span>
+                                    <span class="metric-value">${res.cpu_times.user.toFixed(1)}s / ${res.cpu_times.system.toFixed(1)}s</span>
+                                </div>
+                                
+                                <h5 style="margin-top: 1.5rem;">Memory Usage</h5>
+                                <div class="metric">
+                                    <span>Working Set (RSS)</span>
+                                    <span class="metric-value">${res.memory.rss_mb.toFixed(1)} MB</span>
+                                </div>
+                                <div class="metric">
+                                    <span>Virtual Memory</span>
+                                    <span class="metric-value">${res.memory.vms_mb.toFixed(1)} MB</span>
+                                </div>
+                                <div class="metric">
+                                    <span>Memory Percentage</span>
+                                    <span class="metric-value">${res.memory.percent.toFixed(1)}%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: ${res.memory.percent}%"></div>
+                                </div>
+                                
+                                ${res.io ? `
+                                <h5 style="margin-top: 1.5rem;">I/O Statistics</h5>
+                                <div class="metric">
+                                    <span>Data Read</span>
+                                    <span class="metric-value">${res.io.read_mb.toFixed(1)} MB</span>
+                                </div>
+                                <div class="metric">
+                                    <span>Data Written</span>
+                                    <span class="metric-value">${res.io.write_mb.toFixed(1)} MB</span>
+                                </div>
+                                ` : ''}
+                                
+                                <div class="metric" style="margin-top: 1.5rem;">
+                                    <span>Threads</span>
+                                    <span class="metric-value">${res.threads}</span>
+                                </div>
+                                
+                                <div style="margin-top: 1rem; text-align: center; color: #666; font-size: 0.875rem;">
+                                    Auto-refreshing every 2 seconds...
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        content.innerHTML = '<div class="error-box">Task is no longer running</div>';
+                        clearInterval(window.resourceRefreshInterval);
+                    }
+                } catch (error) {
+                    console.error('Error loading resources:', error);
+                }
+            };
+            
+            // Clear any existing interval
+            if (window.resourceRefreshInterval) {
+                clearInterval(window.resourceRefreshInterval);
+            }
+            
+            // Initial load
+            await refreshResources();
+            
+            // Set up auto-refresh every 2 seconds
+            window.resourceRefreshInterval = setInterval(refreshResources, 2000);
+        }
+    </script>
+</body>
+</html>
